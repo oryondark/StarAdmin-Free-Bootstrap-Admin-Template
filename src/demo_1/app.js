@@ -1,14 +1,10 @@
-const http = require('http');
+var express = require('express');
+var app = express();
+var path = require('path');
 
-const hostname = '15.164.233.249';
-const port = 8080;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+// viewed at http://localhost:8080
+app.get('/', function(req, res) {
+    res.sendFile(path.join("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1" + '/index.html'));
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(3000);
