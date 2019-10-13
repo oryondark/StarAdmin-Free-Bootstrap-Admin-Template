@@ -6,5 +6,5 @@ var path = require('path');
 app.get('/', function(req, res) {
     res.sendFile(path.join("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1" + '/index.html'));
 });
-
+app.use('/static', express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1"));
 app.listen(3000);
