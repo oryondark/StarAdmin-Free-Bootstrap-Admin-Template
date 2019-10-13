@@ -53,6 +53,9 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
       $("#sidebar > .nav > .nav-item").find('.collapse.show').collapse('hide');
     });
 
+    // This is no need function.
+    // I will remove to below.
+    /*
     function appendBanner() {
       var bannerState = localStorage.getItem('bannerState') ? localStorage.getItem('bannerState') : "enabled";
       if (bannerState == "enabled") {
@@ -75,6 +78,7 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
     }
 
     appendBanner();
+    */
 
     //checkbox and radios
     $(".form-check label,.form-radio label").append('<i class="input-helper"></i>');
