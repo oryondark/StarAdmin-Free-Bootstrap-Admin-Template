@@ -32,9 +32,11 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 // python running code
 // Step 1. install python-shell using npm.
 // Step 2. call by reference of file name, but you should be acclimatized usage of this.
-var pythonShell = require('python-shell');
+let {pythonShell} = require('python-shell');
 
 var testPython = function(){
+	import {pythonShell} from 'python-shell'
+	
 	var parameters = {
 		mode: 'text',
 		pythonPath: '/usr/bin/python3'
