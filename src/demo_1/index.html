@@ -581,21 +581,38 @@ This proect has many class to rander.
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
-    <script>
-      $(function () {
-          var fileupload = $("#FileUpload1");
-          var filePath = $("#spnFilePath");
-          var button = $("#btnImageUploader");
-          button.click(function () {
-            console.log("buttn click")
-            fileupload.click();
-          });
-          fileupload.change(function () {
-              var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
-              //filePath.html("<b>Selected File: </b>" + fileName);
-              // 여기다가 트리거시키면 되지 않을까 함.
-          });
-      });
+    <script type="text/javascript">   
+    $(document).ready(function() {
+         
+        $("#myform").submit( function(e){
+            e.preventDefault();
+                 
+            var datas, xhr;
+         
+            datas = new FormData();
+            datas.append( 'service_image', $( '#service_image' )[0].files[0] );
+         
+            $.ajax({
+                url: someurl, // url where upload the image
+                contentType: 'multipart/form-data', 
+                type: 'POST',
+                data: datas,   
+                dataType: 'json',     
+                mimeType: 'multipart/form-data',
+                success: function (data) {               
+                     alert( data.url );                
+                },
+                error : function (jqXHR, textStatus, errorThrown) {
+                    alert('ERRORS: ' + textStatus);
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });         
+        });
+         
+    });
+     
     </script>
     <!-- End custom js for this page-->
   </body>
