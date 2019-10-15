@@ -15,8 +15,16 @@ app.listen(3000);
 // step 2. instance obejct for mutler.
 // step 3. monitor post method using app.post, running uploader front to backend if a user requests to you web.
 const multer = require('multer');
-const upload = multer({dest: "uploaded/"});
-
+const storage = multer.diskStorage({
+	destination: function(req, file, callback){
+		callback(null, 'uploaded/');
+	},
+	filename: function(req, file, callback){
+		callback(, file.originalname);
+	}
+})
+//const upload = multer({dest: "uploaded/"});
+const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	console.log(req.file);
 	console.log("success");
