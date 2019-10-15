@@ -90,7 +90,7 @@ This proect has many class to rander.
             <div class="form-group">
               <form id="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
                 <input type="button" id="btnFileUpload" value="Select File" />
-                
+                <span id="spnFilePath"></span>
                 <input type="file" id="FileUpload1" style="display: none" />
               </form>
             </div>
@@ -556,9 +556,7 @@ This proect has many class to rander.
           <footer class="footer">
             <div class="container-fluid clearfix">
               <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019 <a href="https://github.com/oryondark/StarAdmin-Free-Bootstrap-Admin-Template" target="_blank">Powered by StartAdmin-Free</a>. All rights reserved.</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Web creator : hyunjune kim <i class="mdi mdi-heart text-danger"></i>
-              </span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Model maker : Heetai kim<i class="mdi mdi-heart text-danger"></i>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Vision&Bigdata Labs.<i class="mdi mdi-heart text-danger"></i>
               </span>
             </div>
           </footer>
@@ -592,7 +590,15 @@ This proect has many class to rander.
             });
             fileupload.change(function () {
                 var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
-                filePath.html("<b>Selected File: </b>" + fileName);
+
+                /*
+                $.ajax({
+                  type:"POST",
+                  enctype: "multipart/form-data",
+                  url: "../uploaded",
+                  data:
+                })
+                */
             });
         });
     </script>
