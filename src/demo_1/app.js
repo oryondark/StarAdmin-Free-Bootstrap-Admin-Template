@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 //const upload = multer({dest: "uploaded/"});
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
-	req.send("Success");
+	res.send("Success");
 	
 	// python running code
 	// Step 1. install python-shell using npm.
