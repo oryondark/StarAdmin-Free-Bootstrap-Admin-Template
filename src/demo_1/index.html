@@ -582,36 +582,9 @@ This proect has many class to rander.
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
     <script type="text/javascript">   
-    $(document).ready(function() {
-         
-        $("#upload_button").submit( function(e){
-            e.preventDefault();
-                 
-            var datas, xhr;
-         
-            datas = new FormData();
-            datas.append( 'service_image', $( '#service_image' )[0].files[0] );
-         
-            $.ajax({
-                url: someurl, // url where upload the image
-                contentType: 'multipart/form-data', 
-                type: 'POST',
-                data: datas,   
-                dataType: 'json',     
-                mimeType: 'multipart/form-data',
-                success: function (data) {               
-                     alert( data.url );                
-                },
-                error : function (jqXHR, textStatus, errorThrown) {
-                    alert('ERRORS: ' + textStatus);
-                },
-                cache: false,
-                contentType: false,
-                processData: false
-            });         
-        });
-         
-    });
+      $("#upload_button").click(function(event){
+        console.log("click_upload_button")
+      })
      
     </script>
     <!-- End custom js for this page-->
