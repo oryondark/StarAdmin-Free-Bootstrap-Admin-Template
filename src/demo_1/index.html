@@ -85,15 +85,13 @@ This proect has many class to rander.
           -->
 
           </ul>
-          <form class="ml-auto search-form d-none d-md-block" action="#">
-            <!-- Upload Image -->
-            <div class="form-group">
-              <form action="../assets/php/reqFile.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="imageFile"></input>
-                <input type="submit"></input>
-              </form>
-            </div>
-          </form>
+          <!-- Upload Image -->
+          <div class="form-group">
+            <form action="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
+              <input type="file" name="imageFile"></input>
+              <input type="submit"></input>
+            </form>
+          </div>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
