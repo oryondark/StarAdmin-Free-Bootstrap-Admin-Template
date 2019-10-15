@@ -26,7 +26,6 @@ const storage = multer.diskStorage({
 //const upload = multer({dest: "uploaded/"});
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
-	res.send("Success");
 	testPython()
 });
 
@@ -35,7 +34,7 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 // Step 2. call by reference of file name, but you should be acclimatized usage of this.
 var pythonShell = require('python-shell');
 
-function testPython(){
+var testPython = function(){
 	var parameters = {
 		mode: 'text',
 		pythonPath: '/usr/bin/python3'
