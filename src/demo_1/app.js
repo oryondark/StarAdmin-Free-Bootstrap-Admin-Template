@@ -25,6 +25,7 @@ const storage = multer.diskStorage({
 	}
 })
 //const upload = multer({dest: "uploaded/"});
+// if you errors then install 'npm install --save isomorphic-fetch es6-promise'.
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
