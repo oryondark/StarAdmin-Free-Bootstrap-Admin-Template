@@ -88,10 +88,9 @@ This proect has many class to rander.
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <!-- Upload Image -->
             <div class="form-group">
-              <form action="/upload_form" name="upload_form" method="post" enctype="multipart/form-data">
-                <input type="button" id="btnFileUpload" value="Select File" />
-                <span id="spnFilePath"></span>
-                <input type="file" id="FileUpload1" style="display: none" />
+              <form action="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
+                <input type="file" name="fileUpload"></input>
+                <input type="submit"></input>
               </form>
             </div>
           </form>
@@ -580,28 +579,6 @@ This proect has many class to rander.
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
-    <script type="text/javascript">   
-        $(function () {
-            var fileupload = $("#FileUpload1");
-            var filePath = $("#spnFilePath");
-            var button = $("#btnFileUpload");
-            button.click(function () {
-                fileupload.click();
-            });
-            fileupload.change(function () {
-                var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
-
-                /*
-                $.ajax({
-                  type:"POST",
-                  enctype: "multipart/form-data",
-                  url: "../uploaded",
-                  data:
-                })
-                */
-            });
-        });
-    </script>
     <!-- End custom js for this page-->
   </body>
 </html>
