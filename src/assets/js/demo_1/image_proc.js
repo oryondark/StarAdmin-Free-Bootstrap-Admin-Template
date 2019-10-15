@@ -24,7 +24,7 @@ function image_showing_onclick_event(){
 
 function image_upload_onclick_event(){
 	$(function () {
-	    var fileupload = $("#FileUpload1");
+	    var fileupload = $("#btnImageUploader");
 	    var filePath = $("#spnFilePath");
 	    var button = $("#btnFileUpload");
 	    button.click(function () {
