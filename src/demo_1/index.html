@@ -585,7 +585,7 @@ This proect has many class to rander.
       $("#upload_button").click(function(event){
         //console.log("click_upload_button")
         var form = $("upload_form")[0];
-        var datas = FormData(form);
+        var datas = new FormData(form);
 
         $.ajax({
           type: "POST",
