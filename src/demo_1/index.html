@@ -12,7 +12,7 @@ This proect has many class to rander.
     <title>Clothing Search Demo</title>
     <!-- jquery module -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
+
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../assets/vendors/iconfonts/ionicons/css/ionicons.css">
@@ -88,9 +88,10 @@ This proect has many class to rander.
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <!-- Upload Image -->
             <div class="form-group">
-              <input type="button" id="btnImageUploader" value="Select File"></input>
-              <span id="spnFilePath"></span>
-              <input type="file" id="FileUpload1" style="display: none" />
+              <form id="myform" name="myform" method="post" enctype="multipart/form-data">
+                  <input  id="service_image" name="service_image" type="file" />
+                  <input type=submit value="submit" />
+              </form>
             </div>
           </form>
           <ul class="navbar-nav ml-auto">
@@ -591,7 +592,8 @@ This proect has many class to rander.
           });
           fileupload.change(function () {
               var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
-              filePath.html("<b>Selected File: </b>" + fileName);
+              //filePath.html("<b>Selected File: </b>" + fileName);
+              // 여기다가 트리거시키면 되지 않을까 함.
           });
       });
     </script>
