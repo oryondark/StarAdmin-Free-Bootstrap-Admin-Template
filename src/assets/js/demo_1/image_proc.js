@@ -23,5 +23,16 @@ function image_showing_onclick_event(){
 }
 
 function image_upload_onclick_event(){
-
+	$(function () {
+	    var fileupload = $("#FileUpload1");
+	    var filePath = $("#spnFilePath");
+	    var button = $("#btnFileUpload");
+	    button.click(function () {
+	        fileupload.click();
+	    });
+	    fileupload.change(function () {
+	        var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+	        filePath.html("<b>Selected File: </b>" + fileName);
+	    });
+	});
 }
