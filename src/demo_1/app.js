@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
 		callback(null, 'uploaded/');
 	},
 	filename: function(req, file, callback){
-		callback(, file.originalname);
+		callback(null, file.originalname);
 	}
 })
 //const upload = multer({dest: "uploaded/"});
