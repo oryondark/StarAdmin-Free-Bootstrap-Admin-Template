@@ -585,7 +585,7 @@ This proect has many class to rander.
       $("#upload_button").click(function(event){
         //console.log("click_upload_button")
         var uploadhandler = $("#type_file");
-        var form = $("upload_form")[0];
+        var form = $("#upload_form")[0];
         var datas = new FormData(form);
         uploadhandler.change(function () {
             var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
