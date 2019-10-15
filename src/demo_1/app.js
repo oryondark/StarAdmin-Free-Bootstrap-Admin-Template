@@ -18,5 +18,7 @@ var multer = require('multer');
 const upload = multer({dest: '/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/assets/uploaded'});
 app.post('/upload', upload.single('img'), (req, res) => {
 	console.log(req.file);
+	console.log(req.body);
+	console.log(res);
 })
 
