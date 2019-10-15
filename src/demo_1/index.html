@@ -88,7 +88,7 @@ This proect has many class to rander.
           <form class="ml-auto search-form d-none d-md-block" action="#">
             <!-- Upload Image -->
             <div class="form-group">
-              <form id="myform" name="myform" method="post" enctype="multipart/form-data">
+              <form id="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
                   <input  id="service_image" name="service_image" type="file" />
                   <input id = "upload_button" type=submit value="upload" />
               </form>
@@ -583,7 +583,10 @@ This proect has many class to rander.
     <script src="../assets/js/demo_1/dashboard.js"></script>
     <script type="text/javascript">   
       $("#upload_button").click(function(event){
-        console.log("click_upload_button")
+        //console.log("click_upload_button")
+        var form = $("upload_form")[0];
+        console.log(form);
+
       })
      
     </script>
