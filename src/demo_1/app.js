@@ -14,23 +14,11 @@ app.listen(3000);
 // Step 1. npm install multer
 // step 2. instance obejct for mutler.
 // step 3. monitor post method using app.post, running uploader front to backend if a user requests to you web.
-var multer = require('multer');
+const multer = require('multer');
+const upload = multer({dest: "uploaded/"});
 
-//app.post('/upload_form', upload.single('imageFile'), function(req, res){
-//	console.log("test1");
-//});
-
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-  	console.log(req);
-    cb(null, 'uploaded/'); // cb 콜백함수를 통해 전송된 파일 저장 디렉토리 설정
-  }
-  filename: function (req, file, cb) {
-  	console.log(req);
-    cb(null, file.originalname); // cb 콜백함수를 통해 전송된 파일 이름 설정
-  }
-})
-var upload = multer({ storage: storage })
-app.post('/upload_form', upload.single('imageFile'), function(req, res){
-	console.log("test1");
+app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
+	console.log(req.file);
+	console.log("success");
 });
+
