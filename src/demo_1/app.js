@@ -14,11 +14,11 @@ app.listen(3000);
 // Step 1. npm install multer
 // step 2. instance obejct for mutler.
 // step 3. monitor post method using app.post, running uploader front to backend if a user requests to you web.
-//var multer = require('multer');
-//const upload = multer({dest: '/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/assets/uploaded'});
-app.post('/upload_form', function(req, res){
+var multer = require('multer');
+const upload = multer({dest: '/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/assets/uploaded'});
+app.post('/upload_form', upload.single('img'), (req, res) => {
 	console.log(req.body);
 	console.log(req.file);
 	res.send("success");
-})
+});
 
