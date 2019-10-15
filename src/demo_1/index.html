@@ -90,7 +90,7 @@ This proect has many class to rander.
             <div class="form-group">
               <form id="myform" name="myform" method="post" enctype="multipart/form-data">
                   <input  id="service_image" name="service_image" type="file" />
-                  <input type=submit value="submit" />
+                  <input id = "upload_button" type=submit value="upload" />
               </form>
             </div>
           </form>
@@ -584,7 +584,7 @@ This proect has many class to rander.
     <script type="text/javascript">   
     $(document).ready(function() {
          
-        $("#myform").submit( function(e){
+        $("#upload_button").submit( function(e){
             e.preventDefault();
                  
             var datas, xhr;
