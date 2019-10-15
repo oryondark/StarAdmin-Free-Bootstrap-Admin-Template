@@ -89,8 +89,9 @@ This proect has many class to rander.
             <!-- Upload Image -->
             <div class="form-group">
               <form id="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
-                  <input  id="type_file" name="file" type="file"></input>
-                  <input id = "upload_button" type=submit value="upload"></input>
+                <input type="button" id="btnFileUpload" value="Select File" />
+                <span id="spnFilePath"></span>
+                <input type="file" id="FileUpload1" style="display: none" />
               </form>
             </div>
           </form>
@@ -582,20 +583,18 @@ This proect has many class to rander.
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
     <script type="text/javascript">   
-      $("#upload_button").click(function(event){
-        //console.log("click_upload_button")
-        var uploadhandler = $("#type_file");
-        var form = $("#upload_form");
-        console.log(form)
-        var datas = new FormData(form);
-        uploadhandler.change(function () {
-            var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
-            //filePath.html("<b>Selected File: </b>" + fileName);
+        $(function () {
+            var fileupload = $("#FileUpload1");
+            var filePath = $("#spnFilePath");
+            var button = $("#btnFileUpload");
+            button.click(function () {
+                fileupload.click();
+            });
+            fileupload.change(function () {
+                var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+                filePath.html("<b>Selected File: </b>" + fileName);
+            });
         });
-
-
-      })
-     
     </script>
     <!-- End custom js for this page-->
   </body>
