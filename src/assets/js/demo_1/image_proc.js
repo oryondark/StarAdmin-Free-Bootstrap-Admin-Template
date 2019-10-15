@@ -21,16 +21,3 @@ function image_showing_onclick_event(){
 	image_resize(img1)
 
 }
-
-$(function () {
-    var fileupload = $("#btnImageUploader");
-    var filePath = $("#spnFilePath");
-    var button = $("#btnFileUpload");
-    button.click(function () {
-        fileupload.click();
-    });
-    fileupload.change(function () {
-        var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
-        filePath.html("<b>Selected File: </b>" + fileName);
-    });
-});
