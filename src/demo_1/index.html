@@ -89,7 +89,7 @@ This proect has many class to rander.
             <!-- Upload Image -->
             <div class="form-group">
               <form id="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
-                  <input  id="type_file" name="type_file" type="file" style="display: none"/>
+                  <input  id="type_file" name="type_file" type="file" />
                   <input id = "upload_button" type=submit value="upload" />
               </form>
             </div>
@@ -584,8 +584,13 @@ This proect has many class to rander.
     <script type="text/javascript">   
       $("#upload_button").click(function(event){
         //console.log("click_upload_button")
+        var uploadhandler = $("#type_file");
         var form = $("upload_form")[0];
         var datas = new FormData(form);
+        uploadhandler.change(function () {
+            var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+            //filePath.html("<b>Selected File: </b>" + fileName);
+        });
 
 
       })
