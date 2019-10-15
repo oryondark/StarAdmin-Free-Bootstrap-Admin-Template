@@ -26,11 +26,11 @@ const storage = multer.diskStorage({
 //const upload = multer({dest: "uploaded/"});
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
-	testPython()
+	//res.send('success');
+	var { spawn } = require('child_process');
+	const cmd = spawn('/usr/bin/python3', ['./test.py'])
+	ls.stdout.on('data', (data) =>{
+		console.log("succ");
+	})
 });
-
-// python running code
-// Step 1. install python-shell using npm.
-// Step 2. call by reference of file name, but you should be acclimatized usage of this.
-var pythonShell = require('python-shell');
 
