@@ -45,23 +45,26 @@ function on_console_log(data){
 // Step 3. using storage meta for multer.
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
-	sleep(5000);
-	//res.send('success');
-	var features;
-	fileName = req.file.originalname
-	const { spawn } = require('child_process');
-	const cmd = spawn('/usr/bin/python3', ['../assets/knn_module/inference.py', saveFolder+fileName])
-	cmd.stdout.on('data', (data) => {
-		console.log("success")
-	});
-	cmd.stderr.on('data', (data) => {
-		console.log(`err : ${data}`);
-	});
-	cmd.on('close', (code) => {
-		console.log(`existed code : ${code}`);
-	});
 
-	res.end()
+	var test = function(){
+		//res.send('success');
+		var features;
+		fileName = req.file.originalname
+		const { spawn } = require('child_process');
+		const cmd = spawn('/usr/bin/python3', ['../assets/knn_module/inference.py', saveFolder+fileName])
+		cmd.stdout.on('data', (data) => {
+			console.log("success")
+		});
+		cmd.stderr.on('data', (data) => {
+			console.log(`err : ${data}`);
+		});
+		cmd.on('close', (code) => {
+			console.log(`existed code : ${code}`);
+		});
+
+		res.end()
+	}
+	setTimeout(test, 5000);
 
 });
 
