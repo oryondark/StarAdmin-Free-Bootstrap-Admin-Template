@@ -12,7 +12,7 @@ app.use(express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src
 app.use("/assets", express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/assets"));
 app.listen(3000);
 
-/*
+
 // file uploader using multer
 // Step 1. npm install multer
 // step 2. instance obejct for mutler.
@@ -60,4 +60,3 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 	res.send()
 
 });
-*/
