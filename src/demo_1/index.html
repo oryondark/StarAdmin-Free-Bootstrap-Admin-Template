@@ -12,7 +12,7 @@ This proect has many class to rander.
     <title>Clothing Search Demo</title>
     <!-- jquery module -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
+    <script src="/js/jquery.form.js"></script>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../assets/vendors/iconfonts/ionicons/css/ionicons.css">
@@ -581,7 +581,7 @@ This proect has many class to rander.
         e.preventDefault();
         $.ajax({
           type:"POST",
-          url:"/upload_form",
+          url:"../assets/php/reqFile.php",
           data: formData,
           processData: false,
           contentType: false,
