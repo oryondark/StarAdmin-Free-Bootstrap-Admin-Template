@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+const save_folder = 'uploaded/'
 // viewed at http://localhost:8080
 
 app.get('/', function(req, res) {
@@ -18,7 +19,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
 	destination: function(req, file, callback){
-		callback(null, 'uploaded/');
+		callback(null, save_folder);
 	},
 	filename: function(req, file, callback){
 		callback(null, file.originalname);
