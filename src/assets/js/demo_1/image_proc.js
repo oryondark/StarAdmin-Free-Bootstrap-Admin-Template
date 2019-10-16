@@ -14,8 +14,8 @@ function image_imshow(imName){
 
 }
 
-function preview_load(id){
-	console.log(id);
+function preview_load(img){
+	console.log(img.src);
 }
 
 function thumbnail_append(path){
