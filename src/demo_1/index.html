@@ -565,30 +565,19 @@ This proect has many class to rander.
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
-    <!--
     <script type="text/javascript">   
-        $(function () {
-            var fileupload = $("#FileUpload1");
-            var filePath = $("#spnFilePath");
-            var button = $("#btnFileUpload");
-            button.click(function () {
-                fileupload.click();
-            });
-            fileupload.change(function () {
-                var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+      $('#upload_form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+          type:"POST",
+          url:"/upload_form",
+          success:function(res){
+            alert(res);
+          }
 
-                /*
-                $.ajax({
-                  type:"POST",
-                  enctype: "multipart/form-data",
-                  url: "../uploaded",
-                  data:
-                })
-                */
-            });
-        });
+        })
+      })
     </script>
-    -->
     <!-- End custom js for this page-->
   </body>
 </html>
