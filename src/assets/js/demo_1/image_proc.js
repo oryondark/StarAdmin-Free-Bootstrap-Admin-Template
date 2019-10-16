@@ -1,27 +1,28 @@
 // In this javascript process fitting row to images.
 function image_resize(img){
 	img.onload = function(){
-		this.style.width = "80%"
-		this.style.height = "80%"
+		this.style.width = "80%";
+		this.style.height = "80%";
 	}
 
 }
 
 function image_imshow(imName){
 	//PATH in S3
-	hardcoding_path = "insert path"
-	img.src = hardcoding_path + imName
+	hardcoding_path = "insert path";
+	img.src = hardcoding_path + imName;
 
 }
 
 function import_thumbnail(imgList){
-	image_folder = "../assets/clothes"
-	var json_obj = JSON.parse(imgList)
-	clothes = json_obj.clothes
-	clothes_keys = clothes.keys()
+	image_folder = "../assets/clothes/";
+	var json_obj = JSON.parse(imgList);
+	clothes = json_obj.clothes;
 
-	for ( key in clothes_keys){
-		console.log(key);
+	for ( key in clothes){
+		value = clothes[key].split("\\");
+		full_path = image_folder + value[0] + "/" + value[1];
+		console.log(full_path);
 	}
 
 
@@ -29,8 +30,8 @@ function import_thumbnail(imgList){
 }
 
 function image_showing_onclick_event(){
-	var img1 = document.getElementById("cloth_1")
-	img1.src = "https://hjkim-clothing.s3.ap-northeast-2.amazonaws.com/Test/Pinstripe_000001.jpg"
-	image_resize(img1)
+	var img1 = document.getElementById("cloth_1");
+	img1.src = "https://hjkim-clothing.s3.ap-northeast-2.amazonaws.com/Test/Pinstripe_000001.jpg";
+	image_resize(img1);
 
 }
