@@ -86,7 +86,7 @@ This proect has many class to rander.
 
           </ul>
           <!-- Upload Image -->
-          <div>
+          <div class="form-group">
             <form id='upload_form' action="/upload_form" name="upload_form" method="post" enctype="multipart/form-data">
               <input type="file" name="fileUpload"></input>
               <input id='summit_input' type="submit"></input>
@@ -572,9 +572,9 @@ This proect has many class to rander.
               var data;
               // build a json object or do something with the form, store in data
               $.ajax({
-                url: '/upload_form',
+                url: 'http://52.78.91.80:3000/upload_form',
                 Type: 'POST',
-                enctype: "multipart/form-data",
+                //enctype: "multipart/form-data",
                 success: function(res){
                   alert(res);
                 }

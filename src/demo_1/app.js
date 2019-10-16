@@ -39,7 +39,7 @@ function on_console_log(data){
 // for example ) if you set file tag such as 'upload_form', your post parameter must be binded it.
 // Step 3. using storage meta for multer.
 const upload = multer({storage:storage});
-app.get('/upload_form', upload.single('fileUpload'), (req, res) => {
+app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
 	res.writeHead(200, { 'Content-Type': 'text/plain' });
 	res.on('data', function(chunk){
