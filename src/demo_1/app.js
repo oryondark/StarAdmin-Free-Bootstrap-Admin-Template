@@ -1,15 +1,16 @@
 var express = require('express');
 var app = express();
-//app.use(bodyParser());
-
 var path = require('path');
 const saveFolder = 'uploaded/'
+
+// viewed at http://localhost:8080
 
 app.get('/', function(req, res) {
     res.sendFile(path.join("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1" + '/index.html'));
 });
 app.use(express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1/."));
 app.use("/assets", express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/assets"));
+app.listen(3000);
 
 // file uploader using multer
 // Step 1. npm install multer
@@ -40,8 +41,6 @@ function on_console_log(data){
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
-	//res.end("success");
-
 	var features;
 	fileName = req.file.originalname
 	const { spawn } = require('child_process');
@@ -58,4 +57,3 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	});
 });
 
-app.listen(3000);
