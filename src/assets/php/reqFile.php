@@ -31,7 +31,7 @@ if( !in_array($ext, $allowed_ext) ) {
 }
  
 // 파일 이동
-//move_uploaded_file( $_FILES['imageFile']['tmp_name'], "$uploads_dir/$name");
+move_uploaded_file( $_FILES['imageFile']['tmp_name'], "$uploads_dir/$name");
 
 // 파일 정보 출력
 echo "Uploaded file success"
