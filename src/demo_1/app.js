@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-const save_folder = 'uploaded/'
-const filename = ''
+const saveFolder = 'uploaded/'
+
 // viewed at http://localhost:8080
 
 app.get('/', function(req, res) {
@@ -20,7 +20,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
 	destination: function(req, file, callback){
-		callback(null, save_folder);
+		callback(null, saveFolder);
 	},
 	filename: function(req, file, callback){
 		callback(null, file.originalname);
@@ -37,11 +37,12 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
-	console.log(req.file.originalname);
+
+	fileName = req.file.originalname
 	const { spawn } = require('child_process');
-	//const cmd = spawn('/usr/bin/python3', ['./test.py'])
-	//cmd.stdout.on('data', (data) =>{
-	//	console.log("succ");
-	//})
+	const cmd = spawn('/usr/bin/python3', ['../assets/knn_moudle/inference.py', saveFolder+fileName])
+	cmd.stdout.on('data', (data) =>{
+		console.log("succ");
+	})
 });
 
