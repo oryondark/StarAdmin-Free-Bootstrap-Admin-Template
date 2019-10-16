@@ -88,7 +88,7 @@ This proect has many class to rander.
           <!-- Upload Image -->
           <div class="form-group">
             <form action="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
-              <input type="file" name="fileUpload"></input>
+              <input id="fileupload" type="file" name="fileUpload"></input>
               <input type="submit"></input>
             </form>
           </div>
@@ -574,11 +574,18 @@ This proect has many class to rander.
     </script>
     <script type="text/javascript">   
       $('form').on('submit', function(e) {
-        sleep(5000);
+        var formData = new FormData();
+        for(var i=0; i<$("#fileupload")[0].files.length; i++){
+          formData.append('uploadFile', $('#fileupload')[0].files[i]);
+        }
+        //sleep(5000);
         e.preventDefault();
         $.ajax({
           type:"POST",
           url:"/upload_form",
+          data: formData,
+          processData: false,
+          contentType: false,
           success:function(data){
             console.log(data);
           }
