@@ -16,8 +16,9 @@ function image_imshow(imName){
 
 function import_thumbnail(imgList){
 	image_folder = "../assets/clothes"
-	var obj = JSON.parse(imgList)
-	console.log(obj);
+	var json_obj = JSON.parse(imgList)
+	clothes = json_obj.clothes
+	console.log(clothes)
 
 }
 
