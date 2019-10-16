@@ -569,6 +569,12 @@ This proect has many class to rander.
     <script type="text/javascript">   
       $('form').on('submit', function(e) {
         e.preventDefault(); 
+        $.ajax({
+          url:"/upload_form",
+          success:function(data){
+            console.log(data);
+          }
+        })
       })
     </script>
     <!-- End custom js for this page-->
