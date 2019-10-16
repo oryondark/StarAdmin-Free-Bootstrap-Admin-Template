@@ -14,11 +14,15 @@ function image_imshow(imName){
 
 }
 
+function preview_load(id){
+	console.log(id);
+}
+
 function thumbnail_append(path){
 	//<div><img data-u="image" src="image1.jpg" /></div>
 
 	front = "<div class='verticalBlock'><img src='";
-	back = "' width='140' height='250'/></div>";
+	back = "' width='140' height='250' onclick='preview_load(this)'/></div>";
 	var thum_img = $(front+path+back);
 	thum_img.appendTo('#clothesList');
 }
@@ -30,7 +34,7 @@ function import_thumbnail(imgList){
 		list.removeChild(child);
 		child = list.lastElementChild;
 	}
-	
+
 	image_folder = "../assets/clothes/";
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
