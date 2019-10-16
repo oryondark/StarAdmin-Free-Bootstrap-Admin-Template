@@ -27,11 +27,6 @@ const storage = multer.diskStorage({
 	}
 })
 
-function sleep (delay) {
-   var start = new Date().getTime();
-   while (new Date().getTime() < start + delay);
-}
-
 function on_console_log(data){
 	console.log(data.toString())
 }

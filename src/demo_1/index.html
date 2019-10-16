@@ -565,9 +565,17 @@ This proect has many class to rander.
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
+    <script>
+      function sleep (delay) {
+         var start = new Date().getTime();
+         while (new Date().getTime() < start + delay);
+      }
 
+    </script>
     <script type="text/javascript">   
       $('form').on('submit', function(e) {
+        sleep(5000);
+        e.preventDefault();
         $.ajax({
           type:"POST",
           url:"/upload_form",
