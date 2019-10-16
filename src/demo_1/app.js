@@ -23,8 +23,8 @@ const storage = multer.diskStorage({
 		callback(null, save_folder);
 	},
 	filename: function(req, file, callback){
-		filename = file.originalname
-		callback(null, filename);
+		callback(null, file.originalname);
+		console.log(file.originalname)
 	}
 })
 
