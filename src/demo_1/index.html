@@ -571,7 +571,7 @@ This proect has many class to rander.
               event.preventDefault(); // Stops browser from navigating away from page
               var data;
               // build a json object or do something with the form, store in data
-              $.post($this.attr('action'), data, function(resp) {
+              $.post($.attr('action'), data, function(resp) {
                   alert(resp);
                   // do something when it was successful
               });
