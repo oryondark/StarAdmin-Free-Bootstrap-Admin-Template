@@ -409,7 +409,8 @@ This proect has many class to rander.
                       <div id="thumbnail_block">
                       <!-- Loading Screen -->
                         <div id="thumbnail_area" data-u="slides" style="cursor:default;width:950px;height:100px;overflow:hidden;">
-                           </div>
+                          <!--<div><img data-u="image" src="image1.jpg" /></div>-->
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -606,7 +607,7 @@ This proect has many class to rander.
           contentType: false,
           async: false,
           success:function(data){
-            console.log(data);
+            import_thumbnail(data);
           }
         })
       }

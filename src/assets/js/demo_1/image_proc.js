@@ -14,6 +14,9 @@ function image_imshow(imName){
 
 }
 
+function import_thumbnail(imgList){
+	console.log(imgList)
+}
 
 function image_showing_onclick_event(){
 	var img1 = document.getElementById("cloth_1")
