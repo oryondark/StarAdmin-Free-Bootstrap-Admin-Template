@@ -46,13 +46,13 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	const { spawn } = require('child_process');
 	const cmd = spawn('/usr/bin/python3', ['../assets/knn_moudle/inference.py', saveFolder+fileName])
 	cmd.stdout.on('data', (data) => {
-		console.log('suc : ${data}');
+		console.log(`suc : ${data}`);
 	});
 	cmd.stderr.on('data', (data) => {
-		console.log("err : ${data}");
+		console.log(`err : ${data}`);
 	});
 	cmd.on('close', (code) => {
-		console.log('existed code : ${code}');
+		console.log(`existed code : ${code}`);
 	});
 });
 
