@@ -566,17 +566,18 @@ This proect has many class to rander.
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
     <script type="text/javascript">
-      $(function() {
-          $('#upload_form').submit(function(event) {
-              event.preventDefault(); // Stops browser from navigating away from page
-              var data;
-              // build a json object or do something with the form, store in data
-              $.post($(this).attr('action'), data, function(resp) {
-                  alert(resp);
-                  // do something when it was successful
-              });
-          });
-      });
+      setTimeout(
+        $(function() {
+            $('#upload_form').submit(function(event) {
+                event.preventDefault(); // Stops browser from navigating away from page
+                var data;
+                // build a json object or do something with the form, store in data
+                $.post($(this).attr('action'), data, function(resp) {
+                    alert(resp);
+                    // do something when it was successful
+                });
+            });
+      }),10000);
     </script>
     <!--
     <script type="text/javascript">   
