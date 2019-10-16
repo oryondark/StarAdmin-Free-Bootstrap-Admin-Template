@@ -37,7 +37,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
-	console.log(res.file);
+	console.log(req.file);
 	const { spawn } = require('child_process');
 	//const cmd = spawn('/usr/bin/python3', ['./test.py'])
 	//cmd.stdout.on('data', (data) =>{
