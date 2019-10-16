@@ -15,7 +15,11 @@ function image_imshow(imName){
 }
 
 function preview_load(img){
-	console.log(img.src);
+	path = img.src;
+	front = "<img src='"
+	back = "' with='200' height='200' display='block' text-align='center'/> "
+	var prev_img = $(front+path+back);
+	prev_img.appendTo("#preview")
 }
 
 function thumbnail_append(path){
