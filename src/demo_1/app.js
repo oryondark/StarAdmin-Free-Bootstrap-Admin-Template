@@ -27,6 +27,11 @@ const storage = multer.diskStorage({
 	}
 })
 
+function sleep (delay) {
+   var start = new Date().getTime();
+   while (new Date().getTime() < start + delay);
+}
+
 function on_console_log(data){
 	console.log(data.toString())
 }
@@ -39,7 +44,8 @@ function on_console_log(data){
 // for example ) if you set file tag such as 'upload_form', your post parameter must be binded it.
 // Step 3. using storage meta for multer.
 const upload = multer({storage:storage});
-app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
+app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
+	sleep(5000);
 	//res.send('success');
 	var features;
 	fileName = req.file.originalname
