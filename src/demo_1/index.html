@@ -570,10 +570,14 @@ This proect has many class to rander.
           $('#upload_form').submit(function(event) {
               event.preventDefault(); // Stops browser from navigating away from page
               var data;
+              data.title = 'title';
+              data.message = 'message';
               // build a json object or do something with the form, store in data
               $.ajax({
                 url: 'http://52.78.91.80:3000/upload_form',
                 Type: 'POST',
+                data: JSON.stringify(data),
+                contentType: 'application/json',
                 //enctype: "multipart/form-data",
                 success: function(res){
                   alert(res);
