@@ -87,9 +87,9 @@ This proect has many class to rander.
           </ul>
           <!-- Upload Image -->
           <div class="form-group">
-            <form name="upload_form" method="post" enctype="multipart/form-data">
+            <form id='form' name="upload_form" method="post" enctype="multipart/form-data">
               <input id="fileupload" type="file" name="fileUpload"></input>
-              <input type="submit"></input>
+              <input type="submit" onclick="ajaxFileUpload()"></input>
             </form>
           </div>
           <ul class="navbar-nav ml-auto">
@@ -573,7 +573,7 @@ This proect has many class to rander.
 
     </script>
     <script type="text/javascript">   
-      $('form').on('submit', function(e) {
+      function ajaxFileUpload(){
         
         var form = $("#fileupload")[0];
         var formData = new FormData(form);
@@ -589,7 +589,7 @@ This proect has many class to rander.
             console.log(data);
           }
         })
-      })
+      }
     </script>
     <!-- End custom js for this page-->
   </body>
