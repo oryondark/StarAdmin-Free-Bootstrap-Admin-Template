@@ -27,6 +27,10 @@ const storage = multer.diskStorage({
 	}
 })
 
+function on_console_log(data){
+	console.log(data.toString())
+}
+
 //const upload = multer({dest: "uploaded/"});
 // if you errors then install 'npm install --save isomorphic-fetch es6-promise'.
 // Multer supports upload file easy.
@@ -41,8 +45,6 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	fileName = req.file.originalname
 	const { spawn } = require('child_process');
 	const cmd = spawn('/usr/bin/python3', ['../assets/knn_moudle/inference.py', saveFolder+fileName])
-	cmd.stdout.on('data', (data) =>{
-		console.log("succ");
-	})
+	cmd.stdout.on('data', on_console_log);
 });
 
