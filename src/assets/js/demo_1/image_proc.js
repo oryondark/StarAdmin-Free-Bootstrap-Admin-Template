@@ -18,7 +18,13 @@ function import_thumbnail(imgList){
 	image_folder = "../assets/clothes"
 	var json_obj = JSON.parse(imgList)
 	clothes = json_obj.clothes
-	console.log(clothes[0])
+	clothes_keys = clothes.keys()
+
+	for ( key in clothes_keys){
+		console.log(key);
+	}
+
+
 
 }
 
