@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+app = express.createServer();
+app.use(express.bodyParser());
+
 var path = require('path');
 const saveFolder = 'uploaded/'
 
