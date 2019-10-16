@@ -16,7 +16,7 @@ function image_imshow(imName){
 
 function import_thumbnail(imgList){
 	image_folder = "../assets/clothes"
-	console.log(imgList.clothes)
+	console.log(imgList)
 
 }
 
