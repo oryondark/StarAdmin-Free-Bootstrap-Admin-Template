@@ -86,10 +86,10 @@ This proect has many class to rander.
 
           </ul>
           <!-- Upload Image -->
-          <div class>
-            <form id='isForm' action="/upload_form" name="upload_form" method="post">
+          <div class="form-group">
+            <form action="upload_form" name="upload_form" method="post" enctype="multipart/form-data">
               <input type="file" name="fileUpload"></input>
-              <input id='summit_input' type="submit"></input>
+              <input type="submit"></input>
             </form>
           </div>
           <ul class="navbar-nav ml-auto">
@@ -565,23 +565,6 @@ This proect has many class to rander.
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
-    <!--
-    <script type="text/javascript">
-      $(function() {
-          $('#isForm').submit(function(event) {
-              event.preventDefault(); // Stops browser from navigating away from page
-              // build a json object or do something with the form, store in data
-              $.ajax({
-                type:"POST",
-                url:"/upload_form"
-                success: function(res){
-                  console.log(rs);
-                }
-              });
-          });
-      });
-    </script>
-    -->
     <!--
     <script type="text/javascript">   
         $(function () {
