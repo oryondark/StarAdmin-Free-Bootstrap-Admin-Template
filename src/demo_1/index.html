@@ -89,7 +89,7 @@ This proect has many class to rander.
           <div class="form-group">
             <form id='upload_form' name="upload_form" method="post" enctype="multipart/form-data">
               <input id="fileupload" type="file" name="fileUpload"></input>
-              <input type="button" onclick="ajaxFileUpload()"></input>
+              <input type="button" value="upload" onclick="ajaxFileUpload()"></input>
             </form>
           </div>
           <ul class="navbar-nav ml-auto">
@@ -584,6 +584,7 @@ This proect has many class to rander.
           data: formData,
           processData: false,
           contentType: false,
+          async: false,
           success:function(data){
             console.log(data);
           }
