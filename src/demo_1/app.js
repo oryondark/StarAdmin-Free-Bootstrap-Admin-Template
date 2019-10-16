@@ -51,7 +51,7 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 	cmd.stdout.on('data', (data) => {
 		ret = `data : ${data}`
 		console.log(ret)
-		res.send(ret);
+		res.send(data);
 		console.log("success")
 	});
 	cmd.stderr.on('data', (data) => {
