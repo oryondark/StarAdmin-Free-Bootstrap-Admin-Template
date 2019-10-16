@@ -45,7 +45,7 @@ function on_console_log(data){
 // Step 3. using storage meta for multer.
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
-
+	console.log(req.file.originalname)
 	var test = function(req){
 		//res.send('success');
 		var features;
