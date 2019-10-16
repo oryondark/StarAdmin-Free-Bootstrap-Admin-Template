@@ -570,6 +570,7 @@ This proect has many class to rander.
       $('form').on('submit', function(e) {
         e.preventDefault(); 
         $.ajax({
+          type:"POST",
           url:"/upload_form",
           success:function(data){
             console.log(data);
