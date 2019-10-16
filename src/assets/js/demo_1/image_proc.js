@@ -17,13 +17,6 @@ function image_imshow(imName){
 function thumbnail_append(path){
 	//<div><img data-u="image" src="image1.jpg" /></div>
 
-	var list = document.getElementById("clothesList");
-	child = list.lastElementChild;
-	while(child){
-		list.removeChild(child);
-		child = list.lastElementChild;
-	}
-
 	front = "<div class='verticalBlock'><img src='";
 	back = "' width='140' height='250'/></div>";
 	var thum_img = $(front+path+back);
@@ -31,6 +24,13 @@ function thumbnail_append(path){
 }
 
 function import_thumbnail(imgList){
+	var list = document.getElementById("clothesList");
+	child = list.lastElementChild;
+	while(child){
+		list.removeChild(child);
+		child = list.lastElementChild;
+	}
+	
 	image_folder = "../assets/clothes/";
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
