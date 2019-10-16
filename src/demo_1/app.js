@@ -45,6 +45,8 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	fileName = req.file.originalname
 	const { spawn } = require('child_process');
 	const cmd = spawn('/usr/bin/python3', ['../assets/knn_moudle/inference.py', saveFolder+fileName])
-	cmd.stdout.on('data', on_console_log);
+	cmd.stdout.on('data', (data) =>{
+		console.log('${data}');
+	});
 });
 
