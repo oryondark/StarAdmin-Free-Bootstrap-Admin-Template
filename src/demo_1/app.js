@@ -44,10 +44,13 @@ const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 	//res.send('success');
 	var features;
+	var ret;
 	fileName = req.file.originalname
 	const { spawn } = require('child_process');
 	const cmd = spawn('/usr/bin/python3', ['../assets/knn_module/inference.py', saveFolder+fileName])
 	cmd.stdout.on('data', (data) => {
+		ret = `data : ${data}`
+		console.log(ret)
 		console.log("success")
 	});
 	cmd.stderr.on('data', (data) => {
@@ -56,7 +59,6 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 	cmd.on('close', (code) => {
 		console.log(`existed code : ${code}`);
 	});
-
-	res.send()
-
+	setTimeout(res.send(ret), 10000);
+	
 });
