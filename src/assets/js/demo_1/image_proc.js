@@ -19,10 +19,7 @@ function thumbnail_append(path){
 	front = "<div><img data-u='image' src='";
 	back = "'></img></div>";
 	var thum_img = $(front+path+back);
-	console.log(thum_img);
-
-
-
+	thum_img.appendTo('#thumbnail_area');
 }
 
 function import_thumbnail(imgList){
