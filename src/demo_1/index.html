@@ -567,11 +567,8 @@ This proect has many class to rander.
     <script src="../assets/js/demo_1/dashboard.js"></script>
 
     <script type="text/javascript">   
-      $('#upload_form').submit(function(e){
-        e.preventDefault();
-        $.post("/upload_form",function(res){
-          alert(res);
-        })
+      $('form').on('submit', function(e) {
+        e.preventDefault(); 
       })
     </script>
     <!-- End custom js for this page-->
