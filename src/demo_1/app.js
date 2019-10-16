@@ -55,7 +55,7 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 		console.log(`existed code : ${code}`);
 	});
 
-	res.end()
+	res.send()
 
 });
 
