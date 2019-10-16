@@ -15,6 +15,13 @@ function image_imshow(imName){
 }
 
 function preview_load(img){
+	var list = document.getElementById("preview");
+	child = list.lastElementChild;
+	while(child){
+		list.removeChild(child);
+		child = list.lastElementChild;
+	}
+
 	path = img.src;
 	front = "<img src='"
 	back = "' with='200' height='200' display='block' text-align='center'/> "
