@@ -2960,16 +2960,7 @@
         getScript: function(a, b) {
             return r.get(a, void 0, b, "script")
         }
-    }), r.each(["get", "post"], function(a, b) {
-        r[b] = function(a, c, d, e) {
-            return r.isFunction(c) && (e = e || d, d = c, c = void 0), r.ajax(r.extend({
-                url: a,
-                type: b,
-                dataType: e,
-                data: c,
-                success: d
-            }, r.isPlainObject(a) && a))
-        }
+    })
     }), r._evalUrl = function(a) {
         return r.ajax({
             url: a,
