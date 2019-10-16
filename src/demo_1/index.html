@@ -87,7 +87,7 @@ This proect has many class to rander.
           </ul>
           <!-- Upload Image -->
           <div class>
-            <form id='upload_form' action="/upload_form" name="upload_form" method="post">
+            <form id='isForm' action="/upload_form" name="upload_form" method="post">
               <input type="file" name="fileUpload"></input>
               <input id='summit_input' type="submit"></input>
             </form>
@@ -567,20 +567,14 @@ This proect has many class to rander.
     <script src="../assets/js/demo_1/dashboard.js"></script>
     <script type="text/javascript">
       $(function() {
-          $('#summit_input').submit(function(event) {
+          $('#isForm').submit(function(event) {
               event.preventDefault(); // Stops browser from navigating away from page
-              var data = {};
-              data.title = 'title';
-              data.message = 'message';
               // build a json object or do something with the form, store in data
               $.ajax({
-                url: 'http://52.78.91.80:3000/upload_form',
-                Type: 'POST',
-                data: JSON.stringify(data),
-                contentType: 'application/json',
-                //enctype: "multipart/form-data",
+                type:"POST",
+                url:"/upload_form"
                 success: function(res){
-                  alert(res);
+                  console.log(rs);
                 }
               });
           });
