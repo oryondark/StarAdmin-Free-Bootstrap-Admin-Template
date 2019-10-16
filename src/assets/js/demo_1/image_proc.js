@@ -15,7 +15,9 @@ function image_imshow(imName){
 }
 
 function import_thumbnail(imgList){
-	console.log(imgList)
+	image_folder = "../assets/clothes"
+	console.log(imgList.clothes)
+
 }
 
 function image_showing_onclick_event(){
