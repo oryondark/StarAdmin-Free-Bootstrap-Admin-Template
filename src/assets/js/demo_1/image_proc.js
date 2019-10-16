@@ -16,7 +16,7 @@ function image_imshow(imName){
 
 function thumbnail_append(path){
 	//<div><img data-u="image" src="image1.jpg" /></div>
-	front = "<div class='block'><img src='";
+	front = "<div class='verticalBlock'><img src='";
 	back = "' width='140' height='250'/></div>";
 	var thum_img = $(front+path+back);
 	thum_img.appendTo('#clothesList');
