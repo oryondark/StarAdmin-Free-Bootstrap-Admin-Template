@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 const save_folder = 'uploaded/'
+const filename = ''
 // viewed at http://localhost:8080
 
 app.get('/', function(req, res) {
@@ -22,18 +23,27 @@ const storage = multer.diskStorage({
 		callback(null, save_folder);
 	},
 	filename: function(req, file, callback){
-		callback(null, file.originalname);
+		filename = file.originalname
+		callback(null, filename);
 	}
 })
+
 //const upload = multer({dest: "uploaded/"});
 // if you errors then install 'npm install --save isomorphic-fetch es6-promise'.
+// Multer supports upload file easy.
+// Step 1. install multer module.
+// Step 2. bind to attribute is 'name' of file tag in HTML markup.
+// for example ) if you set file tag such as 'upload_form', your post parameter must be binded it.
+// Step 3. using storage meta for multer.
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
 	const { spawn } = require('child_process');
-	const cmd = spawn('/usr/bin/python3', ['./test.py'])
-	cmd.stdout.on('data', (data) =>{
-		console.log("succ");
-	})
+	console.log(save_folder);
+	console.log(filename);
+	//const cmd = spawn('/usr/bin/python3', ['./test.py'])
+	//cmd.stdout.on('data', (data) =>{
+	//	console.log("succ");
+	//})
 });
 
