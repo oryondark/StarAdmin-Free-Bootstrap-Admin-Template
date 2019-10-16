@@ -7,7 +7,7 @@ const saveFolder = 'uploaded/'
 
 // viewed at http://localhost:8080
 
-app.get('/', function(req, res) {
+app.post('/', function(req, res) {
     res.sendFile(path.join("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1" + '/index.html'));
 });
 app.use(express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1/."));
