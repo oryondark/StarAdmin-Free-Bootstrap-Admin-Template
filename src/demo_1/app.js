@@ -46,7 +46,7 @@ function on_console_log(data){
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 
-	var test = function(){
+	var test = function(req){
 		//res.send('success');
 		var features;
 		fileName = req.file.originalname
