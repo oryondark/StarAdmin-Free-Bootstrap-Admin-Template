@@ -87,9 +87,9 @@ This proect has many class to rander.
           </ul>
           <!-- Upload Image -->
           <div class="form-group">
-            <form id='form' name="upload_form" method="post" enctype="multipart/form-data">
+            <form id='upload_form' name="upload_form" method="post" enctype="multipart/form-data">
               <input id="fileupload" type="file" name="fileUpload"></input>
-              <input type="submit" onclick="ajaxFileUpload()"></input>
+              <input type="button" onclick="ajaxFileUpload()"></input>
             </form>
           </div>
           <ul class="navbar-nav ml-auto">
@@ -575,7 +575,7 @@ This proect has many class to rander.
     <script type="text/javascript">   
       function ajaxFileUpload(){
         
-        var form = $("#fileupload")[0];
+        var form = $("#upload_form")[0];
         var formData = new FormData(form);
         //sleep(5000);
         e.preventDefault();
