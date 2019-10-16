@@ -1,6 +1,6 @@
 var express = require('express');
 //var app = express();
-app = express.createServer();
+var app = module.exports = express.createServer();  
 app.use(express.bodyParser());
 
 var path = require('path');
