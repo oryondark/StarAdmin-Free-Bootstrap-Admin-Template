@@ -16,10 +16,10 @@ function image_imshow(imName){
 
 function thumbnail_append(path){
 	//<div><img data-u="image" src="image1.jpg" /></div>
-	front = "<div><img data-u='image' src='";
-	back = "'></img></div>";
+	front = "<div class='block'><img src='";
+	back = "' width='140' height='250'/></div>";
 	var thum_img = $(front+path+back);
-	thum_img.appendTo('#thumbnail_area');
+	thum_img.appendTo('#clothesList');
 }
 
 function import_thumbnail(imgList){
@@ -33,8 +33,6 @@ function import_thumbnail(imgList){
 		full_path = image_folder + value[0] + "/" + value[1];
 		thumbnail_append(full_path);
 	}
-
-
 
 }
 
