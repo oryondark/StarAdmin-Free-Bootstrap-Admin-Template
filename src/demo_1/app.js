@@ -7,7 +7,7 @@ const saveFolder = 'uploaded/'
 
 // viewed at http://localhost:8080
 
-app.post('/', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(path.join("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1" + '/index.html'));
 });
 app.use(express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1/."));
@@ -42,10 +42,6 @@ function on_console_log(data){
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
-	res.writeHead(200, { 'Content-Type': 'text/plain' });
-	res.on('data', function(chunk){
-		console.log('got data');
-	})
 	res.end("success");
 	/*
 	var features;
