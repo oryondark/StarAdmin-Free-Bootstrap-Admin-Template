@@ -586,6 +586,12 @@ This proect has many class to rander.
       }
     </style>
     <script>
+        jQuery(document).ready(function ($) {
+            var options = { $AutoPlay: 1 };
+            var jssor1_slider = new $JssorSlider$("jssor_1", options);
+        });
+    </script>
+    <script>
       function sleep (delay) {
          var start = new Date().getTime();
          while (new Date().getTime() < start + delay);
