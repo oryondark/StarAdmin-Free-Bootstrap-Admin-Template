@@ -24,7 +24,7 @@ function preview_load(img){
 
 	path = img.src;
 	front = "<img src='"
-	back = "' with='200' height='200' display='block' text-align='center'/> "
+	back = "' with='200' height='600' display='block' text-align='center'/> "
 	var prev_img = $(front+path+back);
 	prev_img.appendTo("#preview")
 }
