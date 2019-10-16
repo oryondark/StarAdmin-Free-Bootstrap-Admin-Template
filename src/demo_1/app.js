@@ -42,11 +42,8 @@ function on_console_log(data){
 const upload = multer({storage:storage});
 app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	//res.send('success');
-	res.on('data', function(chunk){
-		console.log('got data');
-	})
 	//res.end("success");
-	/*
+
 	var features;
 	fileName = req.file.originalname
 	const { spawn } = require('child_process');
@@ -61,7 +58,6 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	cmd.on('close', (code) => {
 		console.log(`existed code : ${code}`);
 	});
-	*/
 });
 
 app.listen(3000);
