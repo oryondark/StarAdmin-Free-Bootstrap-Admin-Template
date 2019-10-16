@@ -64,7 +64,7 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 
 		res.end()
 	}
-	setTimeout(test, 5000);
+	setTimeout(function(){test(req)}, 5000);
 
 });
 
