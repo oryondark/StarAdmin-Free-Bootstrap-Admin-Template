@@ -14,15 +14,27 @@ function image_imshow(imName){
 
 }
 
+function thumbnail_append(path){
+	//<div><img data-u="image" src="image1.jpg" /></div>
+	front = "<div><img data-u='image' src='";
+	back = "'></img></div>";
+	var thum_img = $(front+path+back);
+	console.log(thum_img);
+
+
+
+}
+
 function import_thumbnail(imgList){
 	image_folder = "../assets/clothes/";
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
+	console.log(clothes)
 
 	for ( key in clothes){
 		value = clothes[key].split("\\");
 		full_path = image_folder + value[0] + "/" + value[1];
-		console.log(full_path);
+		thumbnail_append(full_path);
 	}
 
 
