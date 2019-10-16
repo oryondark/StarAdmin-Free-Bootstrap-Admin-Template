@@ -51,6 +51,7 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 	cmd.stdout.on('data', (data) => {
 		ret = `data : ${data}`
 		console.log(ret)
+		res.send(ret);
 		console.log("success")
 	});
 	cmd.stderr.on('data', (data) => {
@@ -59,6 +60,5 @@ app.post('/upload_form', upload.single('fileUpload'), function(req, res) {
 	cmd.on('close', (code) => {
 		console.log(`existed code : ${code}`);
 	});
-	setTimeout(res.send(ret), 10000);
 	
 });
