@@ -46,8 +46,7 @@ app.post('/upload_form', upload.single('fileUpload'), (req, res) => {
 	const { spawn } = require('child_process');
 	const cmd = spawn('/usr/bin/python3', ['../assets/knn_module/inference.py', saveFolder+fileName])
 	cmd.stdout.on('data', (data) => {
-		console.log(`${data}`)
-		return res.json({h:'hello'})
+		console.log("success")
 	});
 	cmd.stderr.on('data', (data) => {
 		console.log(`err : ${data}`);
