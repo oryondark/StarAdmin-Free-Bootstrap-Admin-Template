@@ -574,10 +574,9 @@ This proect has many class to rander.
     </script>
     <script type="text/javascript">   
       $('form').on('submit', function(e) {
-        var formData = new FormData();
-        for(var i=0; i<$("#fileupload")[0].files.length; i++){
-          formData.append('uploadFile', $('#fileupload')[0].files[i]);
-        }
+        
+        var form = $("#fileupload")[0];
+        var formData = new FormData(form);
         //sleep(5000);
         e.preventDefault();
         $.ajax({
