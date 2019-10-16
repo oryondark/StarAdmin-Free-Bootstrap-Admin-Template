@@ -565,21 +565,19 @@ This proect has many class to rander.
     <!-- Custom js for this page-->
     <script src="../assets/js/demo_1/image_proc.js"></script> <!-- image upload & processing -->
     <script src="../assets/js/demo_1/dashboard.js"></script>
-    <!--
     <script type="text/javascript">
       $(function() {
           $('#upload_form').submit(function(event) {
               event.preventDefault(); // Stops browser from navigating away from page
               var data;
               // build a json object or do something with the form, store in data
-              $.post('/upload_form', data, function(resp) {
+              $.post($this.attr('action'), data, function(resp) {
                   alert(resp);
                   // do something when it was successful
               });
           });
       });
     </script>
-    -->
     <!--
     <script type="text/javascript">   
         $(function () {
