@@ -24,7 +24,7 @@ function preview_load(img){
 
 	path = img.src;
 	front = "<img src='"
-	back = "' with='200' height='600' display='block' text-align='center'/> "
+	back = "' with='200' height='450' display='block' text-align='center'/> "
 	var prev_img = $(front+path+back);
 	prev_img.appendTo("#preview")
 }
@@ -39,6 +39,7 @@ function thumbnail_append(path){
 }
 
 function import_thumbnail(imgList){
+	console.log(imgList);
 	var list = document.getElementById("clothesList");
 	child = list.lastElementChild;
 	while(child){
