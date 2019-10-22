@@ -39,7 +39,6 @@ function thumbnail_append(path){
 }
 
 function import_patternImage(imgList){
-	var json_obj = JSON.parse(imgList);
 	var img = document.getElementById("patternImg");
 	if (img.getAttribute('src') == null){
 		img.setAttribute('src', imgList);
