@@ -38,14 +38,6 @@ function thumbnail_append(path){
 	thum_img.appendTo('#clothesList');
 }
 
-function import_patternImage(imgList){
-	var json_obj = JSON.parse(imgList);
-	var img = document.getElementById("patternImg");
-	if img.getAttribute('src') == null{
-		img.setAttribute('src', imgList);
-	}
-}
-
 function import_thumbnail(imgList){
 	console.log(imgList);
 	var list = document.getElementById("clothesList");
