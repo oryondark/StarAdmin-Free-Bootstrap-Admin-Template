@@ -39,7 +39,8 @@ function thumbnail_append(path){
 }
 
 function import_patternImage(patternImg){
-	console.log("image attribute check")
+	console.log("image attribute check");
+	console.log(patternImg);
 	var img = document.getElementById("patternImg");
 	console.log(img.getAttribute('src'));
 }
