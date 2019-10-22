@@ -38,6 +38,12 @@ function thumbnail_append(path){
 	thum_img.appendTo('#clothesList');
 }
 
+function import_patternImage(patternImg){
+	console.log("image attribute check")
+	var img = document.getElementById("patternImg");
+	console.log(img.getAttribute('src'));
+}
+
 function import_thumbnail(imgList){
 	console.log(imgList);
 	var list = document.getElementById("clothesList");
