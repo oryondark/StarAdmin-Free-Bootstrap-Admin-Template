@@ -42,6 +42,8 @@ function import_patternImage(imgList){
 	var img = document.getElementById("patternImg");
 	if (img.getAttribute('src') == null){
 		img.setAttribute('src', imgList);
+	} else {
+		img.setAttribute('src',imgList);
 	}
 }
 
