@@ -38,6 +38,14 @@ function thumbnail_append(path){
 	thum_img.appendTo('#clothesList');
 }
 
+function import_patternImage(imgList){
+	var json_obj = JSON.parse(imgList);
+	var img = document.getElementById("patternImg");
+	if (img.getAttribute('src') == null){
+		img.setAttribute('src', imgList);
+	}
+}
+
 function import_thumbnail(imgList){
 	console.log(imgList);
 	var list = document.getElementById("clothesList");
@@ -50,6 +58,7 @@ function import_thumbnail(imgList){
 	image_folder = "../assets/clothes/";
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
+	import_patternImage(json_obj.patternimg);
 	console.log(clothes)
 
 	for ( key in clothes){
