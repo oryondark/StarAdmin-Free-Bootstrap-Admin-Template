@@ -38,6 +38,7 @@ function thumbnail_append(path){
 	thum_img.appendTo('#clothesList');
 }
 
+//****
 function import_patternImage(imgList){
 	var img = document.getElementById("patternImg");
 	if (img.getAttribute('src') == null){
@@ -69,6 +70,8 @@ function import_thumbnail(imgList){
 	}
 
 }
+//****
+
 
 function image_showing_onclick_event(){
 	var img1 = document.getElementById("cloth_1");
