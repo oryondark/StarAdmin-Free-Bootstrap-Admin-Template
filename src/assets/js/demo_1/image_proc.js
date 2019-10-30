@@ -39,6 +39,7 @@ function thumbnail_append(path){
 }
 
 //****
+// 입력한 패턴이미지 보여주기
 function import_patternImage(imgList){
 	var img = document.getElementById("patternImg");
 	if (img.getAttribute('src') == null){
@@ -48,6 +49,7 @@ function import_patternImage(imgList){
 	}
 }
 
+// 썸네일 보여주기
 function import_thumbnail(imgList){
 	console.log(imgList);
 	var list = document.getElementById("clothesList");
