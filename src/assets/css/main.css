@@ -40,6 +40,21 @@ footer, header, hgroup, menu, nav, section {
 	    z-index: 1;
 			color : blue;
 		}
+	.font-apple{
+		font-family: "NotoSerifWeb","Noto Serif CJK Kr","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    font-weight: bold;
+	}
+ #head_text{
+	 margin: 20px;
+  padding: 20px 0px;
+  text-align: center;
+  text-transform: uppercase;
+	 font-size: 40px;
+	 background-color: #E1F5FE;
+        color: #ffffff;
+        text-shadow: 4px 4px 0px #bdbdbd;
+ }
+
 
 body {
 	line-height: 1;
@@ -3232,3 +3247,4 @@ input, select, textarea {
 			}
 
 	}
+	
