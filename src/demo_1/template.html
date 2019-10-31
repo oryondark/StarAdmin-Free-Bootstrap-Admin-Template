@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Strata by HTML5 UP</title>
+		<title>Clothing Search Demo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -31,6 +31,28 @@
         </div>
 
 			<div id="main">
+				<!-- File Upload -->
+				<!-- TODO: 업로드 구역을 이쁘게 꾸며주세요. 현재 상태에서 UI만 이쁘게 해주면 됩니다. 위치는 변경 노 -->
+				<div class="form-group">
+					<form id='upload_form' name="upload_form" method="post" enctype="multipart/form-data">
+						<input id="fileupload" type="file" name="fileUpload"></input>
+						<input type="button" value="업로드하기" onclick="ajaxFileUpload()"></input>
+					</form>
+				</div>
+
+				<!-- TODO: 이 아래로 이미지가 로드되던 안되던 이쁜 틀을 만들려고 합니다. -->
+				<!-- Pattern image -->
+				<div class="row">
+					<div class="col-md-custom-6 grid-margin stretch-card">
+						<div class="card">
+							<img id="patternImg" width="80" height="80">
+						</div>
+					</div>
+				</div>
+
+				<hr width="100%" />
+
+				<!-- Cloth Preview & Thumnail-->
 				<ul class="pgwSlider">
 		      <li><img src="paris.jpg" alt="Image 1" data-description="Eiffel Tower and Champ de Mars"></li>
 		        <li><img src="montreal_mini.jpg" alt="Image 2" data-large-src="montreal.jpg"></li>
