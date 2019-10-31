@@ -29,6 +29,18 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	#box {
+	    float: left;
+	    height: 10%;
+	    clear: none;
+	    width: 100%;
+	    position: fixed;
+	    background-color: rgba(255, 255, 255, 0.042157);
+	    border: 1px solid rgba(255, 255, 255, 0);
+	    z-index: 1;
+			color : black;
+		}
+
 body {
 	line-height: 1;
 }
@@ -71,6 +83,7 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
 
 /* Basic */
 
