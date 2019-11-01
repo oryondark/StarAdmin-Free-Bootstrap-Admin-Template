@@ -48,14 +48,6 @@
 
             <hr width="100%" />
 
-            <!-- TODO: 업로드 구역을 이쁘게 꾸며주세요. 현재 상태에서 UI만 이쁘게 해주면 됩니다. 위치는 변경 노 -->
-
-				<div class="form-group">
-					<form id='upload_form' name="upload_form" method="post" enctype="multipart/form-data">
-						<input id="fileupload" type="file" name="fileUpload"></input>
-						<input type="button" id="test" value="업로드하기" onclick="ajaxFileUpload()"></input>
-					</form>
-				</div>
             <!-- TODO: 이 아래로 이미지가 로드되던 안되던 이쁜 틀을 만들려고 합니다. -->
             <!-- Pattern image -->
             <div class="row">
@@ -65,6 +57,16 @@
                   </div>
                </div>
             </div>
+            
+            <!-- TODO: 업로드 구역을 이쁘게 꾸며주세요. 현재 상태에서 UI만 이쁘게 해주면 됩니다. 위치는 변경 노 -->
+
+				<div class="form-group">
+					<form id='upload_form' name="upload_form" method="post" enctype="multipart/form-data">
+						<input id="fileupload" type="file" name="fileUpload"></input>
+						<input type="button" id="test" value="업로드하기" onclick="ajaxFileUpload()" ></input>
+					</form>
+				</div>
+
 
 
             <hr width="100%" />
