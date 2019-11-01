@@ -2444,7 +2444,48 @@ input, select, textarea {
 				border-top: 0;
 			}
 
+
+/* File Uploading Button */
+
+			.file_input_textbox{float:left}
+
+			.file_input_div{
+				position:absolute;
+				height: 3.15em;
+				height: calc(2.75em + 6px);
+				line-height: 2.75em;
+				min-width: 10em;
+
+				margin-left:  -200px;
+				margin-right: 100px;
+				padding-right: 600px;
+				overflow:hidden;
+			}
+
+			.file_input_button{
+				width:100px;
+				position:absolute;
+				top:0px;
+				background-color:#aaa;
+				color:#fff;border-style:solid;
+				padding-right: 100px;
+				margin-left: 40px;
+			}
+
+			.file_input_hidden{
+				font-size:45px;
+				position:absolute;
+				right:0px;
+				top:0px;
+				opacity:0;
+				filter:alpha(opacity=0);
+			  -ms-filter:"alpha(opacity=0)";
+				-khtml-opacity:0;
+				-moz-opacity:0;
+			}
+
 /* Button */
+/*
 
 	input[type="submit"],
 	input[type="reset"],
@@ -2565,7 +2606,31 @@ input, select, textarea {
 			color: #b2b2b2 !important;
 			cursor: default;
 		}
+*/
 
+input[type="button"] {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   color: #787878;
+   padding: 8px 12px;
+   background: -webkit-gradient(
+      linear, left top, left bottom,
+      from(#e3e3e3),
+      to(#ffffff));
+   background: linear-gradient(
+      top,
+      #e3e3e3 0%,
+      #ffffff);
+   border-radius: 25px;
+   border: 1px solid #ffffff;
+   box-shadow:
+      0px 1px 3px rgba(000,000,000,0.5),
+      inset 0px 0px 0px rgba(255,255,255,1);
+   text-shadow:
+      1px -1px 0px rgba(214,214,214,1),
+      0px 1px 0px rgba(255,255,255,0.3);
+}
 /* Work Item */
 
 	.work-item {
