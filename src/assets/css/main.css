@@ -29,6 +29,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	#main_title{
+		font-size : 28px;
+		font-weight: bold;
+		font-family: "NotoSerifWeb","Noto Serif CJK Kr","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+
+	}
+
 #menu {
 	color : white;
 	font-size: 15px;
