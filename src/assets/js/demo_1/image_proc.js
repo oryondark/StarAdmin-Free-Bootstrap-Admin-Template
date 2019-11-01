@@ -15,6 +15,7 @@ function image_imshow(imName){
 }
 
 function preview_load(img){
+	console.log("Preview click")
 	var list = document.getElementById("preview");
 	child = list.lastElementChild;
 	while(child){
