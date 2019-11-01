@@ -51,7 +51,14 @@
 				<!-- TODO: 업로드 구역을 이쁘게 꾸며주세요. 현재 상태에서 UI만 이쁘게 해주면 됩니다. 위치는 변경 노 -->
 				<div class="form-group">
 					<form id='upload_form' name="upload_form" method="post" enctype="multipart/form-data">
-						<input id="fileupload" type="file" name="fileUpload"></input>
+						<!--	original file upload area
+												<input id="fileupload" type="file" name="fileUpload"></input>
+												<input type="button" value="업로드하기" onclick="ajaxFileUpload()"></input>
+						-->
+						<div class="file_input_div">
+							<input type="button" value="파일선택" class="file_input_button">
+							<input type="file" class="file_input_hidden" onchange="javascript:document.getElementById('fileName').value = this.value.split('\\')[this.value.split('\\').length-1]">
+						</div>
 						<input type="button" value="업로드하기" onclick="ajaxFileUpload()"></input>
 					</form>
 				</div>

@@ -2444,6 +2444,41 @@ input, select, textarea {
 				border-top: 0;
 			}
 
+
+/* File Uploading Button */
+
+			.file_input_textbox{float:left}
+
+			.file_input_div{
+				position:absolute;
+				height: 3.15em;
+				height: calc(2.75em + 6px);
+				line-height: 2.75em;
+				min-width: 10em;
+				padding: 0 1.5em;
+				overflow:hidden;
+			}
+
+			.file_input_button{
+				width:100px;
+				position:absolute;
+				top:0px;
+				background-color:#aaa;
+				color:#fff;border-style:solid;
+			}
+
+			.file_input_hidden{
+				font-size:45px;
+				position:absolute;
+				right:0px;
+				top:0px;
+				opacity:0;
+				filter:alpha(opacity=0);
+			  -ms-filter:"alpha(opacity=0)";
+				-khtml-opacity:0;
+				-moz-opacity:0;
+			}
+
 /* Button */
 
 	input[type="submit"],
