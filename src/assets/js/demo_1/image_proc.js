@@ -33,7 +33,7 @@ function thumbnail_append(path, num){
 	//<img id="thumb_1" src="" alt="Image 1">
 	const id = "thumb_" + num.toString();
 	var tag = document.getElementById(id);
-	console.log(tag);
+	tag.src = path;
 }
 
 //****
