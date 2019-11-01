@@ -58,9 +58,9 @@ function import_thumbnail(imgList){
 	import_patternImage(json_obj.patternimg);
 	//console.log(clothes);
 	num = 0;
-	for ( key in patches){
+	for ( key in clothes){
 		num = num + 1;
-		value = patches[key].split("\\");
+		value = clothes[key].split("\\");
 		full_path = image_folder + value[0] + "/" + value[1];
 		thumbnail_append(full_path, num);
 	}
