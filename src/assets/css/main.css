@@ -29,34 +29,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-
-	#box {
-	    float: left;
-	    height: 10%;
-	    clear: none;
-	    width: 100%;
-	    position: fixed;
-	    background-color: rgba(255, 255, 255, 0.042157);
-	    border: 1px solid rgba(255, 255, 255, 0);
-	    z-index: 1;
-			color : blue;
-		}
-	.font-apple{
-		font-family: "NotoSerifWeb","Noto Serif CJK Kr","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-    font-weight: bold;
-	}
- #head_text{
-	 margin: 20px;
-  padding: 20px 0px;
-  text-align: center;
-  text-transform: uppercase;
-	 font-size: 40px;
-	 background-color: #E1F5FE;
-        color: #ffffff;
-        text-shadow: 4px 4px 0px #bdbdbd;
- }
-
-
 #menu {
 	color : white;
 	font-size: 15px;
@@ -72,7 +44,6 @@ ul li{
 a.nav-link {
 	text-decoration : none !important;
 }
-
 
 body {
 	line-height: 1;
@@ -3224,4 +3195,3 @@ input, select, textarea {
 			}
 
 	}
-	
