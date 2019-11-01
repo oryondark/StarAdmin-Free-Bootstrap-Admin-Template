@@ -88,6 +88,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="../assets/js/demo_1/image_proc.js"></script>
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.poptrox.min.js"></script>
 			<script src="../assets/js/browser.min.js"></script>
@@ -104,6 +105,24 @@
 		        $('.pgwSlider').pgwSlider();
 		    });
 		  </script>
+			<script type="text/javascript">   
+			  function ajaxFileUpload(){
+			    
+			    var form = $("#upload_form")[0];
+			    var formData = new FormData(form);
+			    $.ajax({
+			      type:"POST",
+			      url:"/upload_form",
+			      data: formData,
+			      processData: false,
+			      contentType: false,
+			      async: false,
+			      success:function(data){
+			        import_thumbnail(data);
+			      }
+			    })
+			  }
+			</script>
 
 			</body>
 </html>
