@@ -2455,7 +2455,10 @@ input, select, textarea {
 				height: calc(2.75em + 6px);
 				line-height: 2.75em;
 				min-width: 10em;
-				padding: 0 1.5em;
+
+				margin-left:  -200px;
+				margin-right: 100px;
+				padding-right: 600px;
 				overflow:hidden;
 			}
 
@@ -2465,6 +2468,8 @@ input, select, textarea {
 				top:0px;
 				background-color:#aaa;
 				color:#fff;border-style:solid;
+				padding-right: 100px;
+				margin-left: 40px;
 			}
 
 			.file_input_hidden{
