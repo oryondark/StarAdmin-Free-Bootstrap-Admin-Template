@@ -14,7 +14,7 @@
             listPosition : 'right',
             selectionMode : 'click',
             transitionEffect : 'fading',
-            autoSlide : true,
+            autoSlide : false,
             displayList : true,
             displayControls : false,
             touchControls : true,
