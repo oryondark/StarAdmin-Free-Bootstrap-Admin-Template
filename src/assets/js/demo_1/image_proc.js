@@ -52,12 +52,7 @@ function import_patternImage(imgList){
 // 썸네일 보여주기
 function import_thumbnail(imgList){
 	console.log(imgList);
-	var list = document.getElementById("clothesList");
-	child = list.lastElementChild;
-	while(child){
-		list.removeChild(child);
-		child = list.lastElementChild;
-	}
+
 
 	image_folder = "../assets/clothes/";
 	var json_obj = JSON.parse(imgList);
@@ -68,7 +63,8 @@ function import_thumbnail(imgList){
 	for ( key in clothes){
 		value = clothes[key].split("\\");
 		full_path = image_folder + value[0] + "/" + value[1];
-		thumbnail_append(full_path);
+		//thumbnail_append(full_path);
+		console.log(full_path);
 	}
 
 }
