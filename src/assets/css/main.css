@@ -30,7 +30,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 
-
+#subtitle,
+#member ,
 #menu {
 	color : white;
 	font-size: 15px;
