@@ -29,13 +29,11 @@ function preview_load(img){
 	prev_img.appendTo("#preview")
 }
 
-function thumbnail_append(path){
-	//<div><img data-u="image" src="image1.jpg" /></div>
-
-	front = "<div class='verticalBlock'><img src='";
-	back = "' width='140' height='250' onclick='preview_load(this)'/></div>";
-	var thum_img = $(front+path+back);
-	thum_img.appendTo('#clothesList');
+function thumbnail_append(path, num){
+	//<img id="thumb_1" src="" alt="Image 1">
+	const id = "thumb_" + num.toString();
+	var tag = document.getElementById(id);
+	console.log(tag);
 }
 
 //****
@@ -58,12 +56,13 @@ function import_thumbnail(imgList){
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
 	import_patternImage(json_obj.patternimg);
-	console.log(clothes)
-
+	console.log(clothes);
+	num = 0;
 	for ( key in clothes){
+		num = num + 1;
 		value = clothes[key].split("\\");
 		full_path = image_folder + value[0] + "/" + value[1];
-		//thumbnail_append(full_path);
+		thumbnail_append(full_path, num);
 		console.log(full_path);
 	}
 
