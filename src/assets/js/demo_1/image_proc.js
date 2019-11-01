@@ -56,14 +56,13 @@ function import_thumbnail(imgList){
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
 	import_patternImage(json_obj.patternimg);
-	console.log(clothes);
+	//console.log(clothes);
 	num = 0;
 	for ( key in clothes){
 		num = num + 1;
 		value = clothes[key].split("\\");
 		full_path = image_folder + value[0] + "/" + value[1];
 		thumbnail_append(full_path, num);
-		console.log(full_path);
 	}
 
 }
