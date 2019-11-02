@@ -111,7 +111,7 @@
         <script src="../assets/js/demo_1/pgwslider.js"></script>
         <script type="text/javascript">
           $(document).ready(function() {
-              $('.pgwSlider').pgwSlider();
+              $('.pgwSlider').pgwSlider().init();
           });
         </script>
          <script type="text/javascript">
@@ -128,7 +128,6 @@
                async: false,
                success:function(data){
                  import_thumbnail(data);
-                 $('.pgwSlider').pgwSlider().reload();
                }
              })
            }
