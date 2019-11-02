@@ -6,7 +6,7 @@ Star Admin is packed with all the features that fit your needs but not cramped w
 Although the template has a design like none other, it is easily customizable to suit your requirements. Star Admin comes with a clean and well-commented code that makes it easy to work with the template. Thus making it an ideal pick for jump starting your project.
 
 # Search system for Fashion Trend
-homepage : http://fashion-retrieve.pslab.cloud./template.html
+homepage : http://crc-retrieve.pslab.cloud.
 <br><br>
 ## At Kookmin University
 
