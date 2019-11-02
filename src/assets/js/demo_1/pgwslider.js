@@ -207,7 +207,7 @@
         var reload = function() {
             pgwSlider.plugin.find('.ps-list > li').each(function() {
                 var element = getElement($(this));
-                pgwSlider.data.push(element);
+                
         };
         // Setup
         var setup = function() {
