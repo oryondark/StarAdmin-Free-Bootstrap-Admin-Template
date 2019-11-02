@@ -212,9 +212,7 @@
                 current_thumb[reload_elementId] = element.thumbnail;
                 reload_elementId++;
             });
-            var preivew = document.getElementById("preview");
-            //preview.src = current_thumb;
-
+            var preview = document.getElementById("preview");
             preview_id = 0
             for (var item in current_thumb){
                 preview[preview_id].src = current_thumb[preview_id];
@@ -720,7 +718,6 @@
         if (options == true){
             init();    
         } else {
-            init();
             reload();
         }
 
