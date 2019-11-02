@@ -205,15 +205,16 @@
             return true;
         };
         var reload = function() {
-            current_thumb = null;
+            var current_thumb = new Array();
+            reload_elementId = 0
             pgwSlider.plugin.find('.ps-list > li').each(function() {
                 var element = getElement($(this));
-                current_thumb = element.thumbnail;
-                var preivew = document.getElementById("preview");
-                //preview.src = current_thumb;
-                console.log(preview[0]);
+                current_thumb[reload_elementId] = element.thumbnail;
+                reload_elementId++;
             });
-            
+            var preivew = document.getElementById("preview");
+            //preview.src = current_thumb;
+            console.log(preview[0]);
         };
         // Setup
         var setup = function() {
