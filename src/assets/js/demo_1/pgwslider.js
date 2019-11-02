@@ -246,7 +246,7 @@
                 pgwSlider.plugin.find('.ps-current').css('width', '100%');
                 pgwSlider.plugin.find('.ps-list').hide();
             }
-            /*
+            
             // Get slider elements
             var elementId = 1;
             pgwSlider.plugin.find('.ps-list > li').each(function() {
@@ -288,7 +288,6 @@
 
                 elementId++;
             });
-            */
 
             // Set list position
             if (pgwSlider.config.listPosition == 'left') {
