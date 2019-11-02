@@ -205,13 +205,23 @@
             return true;
         };
         var reload = function() {
+            var current_thumb = new Array();
+            reload_elementId = 0
             pgwSlider.plugin.find('.ps-list > li').each(function() {
+                //console.log(document.getElementById("preview"));
                 var element = getElement($(this));
-                current_thumb = element.thumbnail;
-                var preivew = document.getElementById("preview");
-                preview.src = current_thumb;
+                current_thumb[reload_elementId] = element.thumbnail;
+                reload_elementId++;
             });
+
+            preview_id = 0
+            for (var item in current_thumb){
+                preview[preview_id].src = current_thumb[preview_id];
+                preview_id++;
+            }
+            console.log(preview);
         };
+
         // Setup
         var setup = function() {
 
@@ -706,30 +716,7 @@
             return true;
         };
 
-        // Reload slider
-        /*
-        pgwSlider.reload = function(newOptions) {
-            pgwSlider.destroy(true);
 
-            pgwSlider = this;
-            pgwSlider.plugin = this;
-            pgwSlider.window = $(window);
-            pgwSlider.plugin.show();
-
-            // Merge new options with the default configuration
-            pgwSlider.config = $.extend({}, defaults, newOptions);
-
-            // Setup
-            setup();
-
-            // Activate interval
-            if (pgwSlider.config.autoSlide) {
-                activateInterval();
-            }
-
-            return true;
-        };
-        */
         // Slider initialization
         if (options == true){
             init();    
