@@ -220,14 +220,7 @@
             // Create container
             pgwSlider.plugin.removeClass(pgwSlider.config.mainClassName).addClass('ps-list');
             pgwSlider.plugin.wrap('<div class="' + pgwSlider.config.mainClassName + '"></div>');
-            pgwSlider.plugin = pgwSlider.plugin.parent();
-            pgwSlider.plugin.prepend('<div class="ps-current"><ul></ul><span class="ps-caption"></span></div>');
             pgwSlider.slideCount = pgwSlider.plugin.find('.ps-list > li').length;
-
-            if (pgwSlider.slideCount == 0) {
-                throw new Error('PgwSlider - No slider item has been found');
-                return false;
-            }
 
             // Add controls
             if (pgwSlider.config.displayControls && pgwSlider.slideCount > 1) {
@@ -246,7 +239,7 @@
                 pgwSlider.plugin.find('.ps-current').css('width', '100%');
                 pgwSlider.plugin.find('.ps-list').hide();
             }
-            
+
             // Get slider elements
             var elementId = 1;
             pgwSlider.plugin.find('.ps-list > li').each(function() {
