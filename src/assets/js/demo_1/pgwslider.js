@@ -212,8 +212,6 @@
                 current_thumb[reload_elementId] = element.thumbnail;
                 reload_elementId++;
             });
-            var preivew = document.getElementById("preview");
-            //preview.src = current_thumb;
 
             preview_id = 0
             console.log(preview);
