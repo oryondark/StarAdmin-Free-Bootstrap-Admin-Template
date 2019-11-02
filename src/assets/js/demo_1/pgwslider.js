@@ -729,6 +729,8 @@
         // Slider initialization
         if (options == true){
             init();    
+        } else {
+            reload();
         }
 
         return this;
