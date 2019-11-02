@@ -13,7 +13,7 @@ app.get('/test', function(req, res) {
 });
 app.use(express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/demo_1/."));
 app.use("/assets", express.static("/home/ubuntu/StarAdmin-Free-Bootstrap-Admin-Template/src/assets"));
-app.listen(3000);
+app.listen(80);
 
 
 // file uploader using multer
