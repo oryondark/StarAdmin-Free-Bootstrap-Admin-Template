@@ -221,7 +221,7 @@
             pgwSlider.plugin.removeClass(pgwSlider.config.mainClassName).addClass('ps-list');
             pgwSlider.plugin.wrap('<div class="' + pgwSlider.config.mainClassName + '"></div>');
             pgwSlider.plugin = pgwSlider.plugin.parent();
-            
+            pgwSlider.plugin.prepend('<div class="ps-current"><ul></ul></div>');
             pgwSlider.slideCount = pgwSlider.plugin.find('.ps-list > li').length;
 
 
@@ -370,6 +370,19 @@
                 elementText += element.description;
             }
 
+            if (elementText != '') {
+                if (element.link) {
+                    elementText = '<a href="' + element.link + '"' + (element.linkTarget ? ' target="' + element.linkTarget + '"' : '') + '>' + elementText + '</a>';
+                }
+
+                if (typeof pgwSlider.plugin.find('.ps-caption').fadeIn == 'function') {
+                    pgwSlider.plugin.find('.ps-caption').html(elementText);
+                    pgwSlider.plugin.find('.ps-caption').fadeIn(pgwSlider.config.transitionDuration / 2);
+                } else {
+                    pgwSlider.plugin.find('.ps-caption').html(elementText);
+                    pgwSlider.plugin.find('.ps-caption').show();
+                }
+            }
 
             // Slider controls
             if (pgwSlider.config.displayControls) {
