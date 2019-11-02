@@ -221,7 +221,7 @@
             pgwSlider.plugin.removeClass(pgwSlider.config.mainClassName).addClass('ps-list');
             pgwSlider.plugin.wrap('<div class="' + pgwSlider.config.mainClassName + '"></div>');
             pgwSlider.plugin = pgwSlider.plugin.parent();
-            pgwSlider.plugin.prepend('<div id="preview" class="ps-current"><ul></ul></div>');
+            pgwSlider.plugin.prepend('<div class="ps-current"><ul></ul></div>');
             pgwSlider.slideCount = pgwSlider.plugin.find('.ps-list > li').length;
 
 
@@ -256,13 +256,9 @@
                 var currentElement = $('<li class="elt_' + elementId + '"></li>');
 
                 if (element.image) {
-                    currentElement.html('<img src="' + element.image + '" alt="' + (element.title ? element.title : '') + '">');
+                    currentElement.html('<img id="preview" src="">');
                 } else if (element.thumbnail) {
-                    currentElement.html('<img src="' + element.thumbnail + '" alt="' + (element.title ? element.title : '') + '">');
-                }
-
-                if (element.link) {
-                    currentElement.html('<a href="' + element.link + '"' + (element.linkTarget ? ' target="' + element.linkTarget + '"' : '') + '>' + currentElement.html() + '</a>');
+                    currentElement.html('<img id="preview" src="">');
                 }
 
                 pgwSlider.plugin.find('.ps-current > ul').append(currentElement);
