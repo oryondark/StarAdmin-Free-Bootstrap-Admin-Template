@@ -208,7 +208,7 @@
             var current_thumb = new Array();
             reload_elementId = 0
             pgwSlider.plugin.find('.ps-list > li').each(function() {
-                console.log(document.getElementById("preview"));
+                //console.log(document.getElementById("preview"));
                 var element = getElement($(this));
                 current_thumb[reload_elementId] = element.thumbnail;
                 reload_elementId++;
@@ -219,6 +219,7 @@
                 preview[preview_id].src = current_thumb[preview_id];
                 preview_id++;
             }
+            console.log(preview);
         };
 
         // Setup
