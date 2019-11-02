@@ -736,7 +736,7 @@
         };
         */
         // Slider initialization
-        init();
+        //init();
 
         return this;
     }
