@@ -221,7 +221,9 @@
             pgwSlider.plugin.removeClass(pgwSlider.config.mainClassName).addClass('ps-list');
             pgwSlider.plugin.wrap('<div class="' + pgwSlider.config.mainClassName + '"></div>');
             pgwSlider.plugin = pgwSlider.plugin.parent();
+            pgwSlider.plugin.prepend('<div class="ps-current"><ul></ul><span class="ps-caption"></span></div>');
             pgwSlider.slideCount = pgwSlider.plugin.find('.ps-list > li').length;
+
 
             // Add controls
             if (pgwSlider.config.displayControls && pgwSlider.slideCount > 1) {
