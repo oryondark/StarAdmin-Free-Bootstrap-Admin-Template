@@ -221,6 +221,7 @@
                 preview_id++;
             }
         };
+
         // Setup
         var setup = function() {
 
@@ -715,34 +716,11 @@
             return true;
         };
 
-        // Reload slider
-        /*
-        pgwSlider.reload = function(newOptions) {
-            pgwSlider.destroy(true);
-
-            pgwSlider = this;
-            pgwSlider.plugin = this;
-            pgwSlider.window = $(window);
-            pgwSlider.plugin.show();
-
-            // Merge new options with the default configuration
-            pgwSlider.config = $.extend({}, defaults, newOptions);
-
-            // Setup
-            setup();
-
-            // Activate interval
-            if (pgwSlider.config.autoSlide) {
-                activateInterval();
-            }
-
-            return true;
-        };
-        */
         // Slider initialization
         if (options == true){
             init();    
         } else {
+            init();
             reload();
         }
 
