@@ -220,6 +220,7 @@
             // Create container
             pgwSlider.plugin.removeClass(pgwSlider.config.mainClassName).addClass('ps-list');
             pgwSlider.plugin.wrap('<div class="' + pgwSlider.config.mainClassName + '"></div>');
+            pgwSlider.plugin = pgwSlider.plugin.parent();
             pgwSlider.slideCount = pgwSlider.plugin.find('.ps-list > li').length;
 
             // Add controls
