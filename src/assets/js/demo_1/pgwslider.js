@@ -214,7 +214,12 @@
             });
             var preivew = document.getElementById("preview");
             //preview.src = current_thumb;
-            preview[0].src = current_thumb[0];
+
+            preview_id = 0
+            for (var item in current_thumb){
+                preview[preview_id].src = current_thumb[preview_id];
+                preview_id++;
+            }
         };
         // Setup
         var setup = function() {
