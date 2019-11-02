@@ -28,15 +28,6 @@
             intervalDuration : 3000
         };
 
-        if (this.length == 0) {
-            return this;
-        } else if(this.length > 1) {
-            this.each(function() {
-                $(this).pgwSlider(options);
-            });
-            return this;
-        }
-
         var pgwSlider = this;
         pgwSlider.plugin = this;
         pgwSlider.data = [];
@@ -53,7 +44,7 @@
         var init = function() {
 
             // Merge user options with the default configuration
-            pgwSlider.config = $.extend({}, defaults, options);
+            pgwSlider.config = $.extend({}, defaults);
 
             // Setup
             setup();
@@ -736,7 +727,7 @@
         };
         */
         // Slider initialization
-        //init();
+        init();
 
         return this;
     }
