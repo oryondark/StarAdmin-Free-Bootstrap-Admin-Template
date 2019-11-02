@@ -727,7 +727,9 @@
         };
         */
         // Slider initialization
-        init();
+        if (options == true){
+            init();    
+        }
 
         return this;
     }
