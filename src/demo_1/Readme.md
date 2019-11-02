@@ -14,7 +14,7 @@ _Contributor & Professor_<br>
 
 #### student
 
-[Hyunune Kim, Dept. of convergence design technology](https://github.com/oryondark/hjkim)<br>
+[Hyunjune Kim, Dept. of convergence design technology](https://github.com/oryondark/hjkim)<br>
 [Dasom Lee, Dept. of computer science](https://github.com/LeSunny)<br>
 [Soyong Lee, Dept. of computer science](https://github.com/sowish23)<br>
 
