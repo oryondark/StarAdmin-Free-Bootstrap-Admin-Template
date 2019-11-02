@@ -212,7 +212,9 @@
                 current_thumb[reload_elementId] = element.thumbnail;
                 reload_elementId++;
             });
-            var preview = document.getElementById("preview");
+            var preivew = document.getElementById("preview");
+            //preview.src = current_thumb;
+
             preview_id = 0
             for (var item in current_thumb){
                 preview[preview_id].src = current_thumb[preview_id];
@@ -713,6 +715,7 @@
 
             return true;
         };
+
 
         // Slider initialization
         if (options == true){
