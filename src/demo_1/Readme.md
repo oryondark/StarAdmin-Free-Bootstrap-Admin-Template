@@ -1,5 +1,5 @@
 # Search system for Fashion Trend
-homepage : http://crc-retrieve.pslab.cloud.
+homepage : http://crc.pslab.cloud.
 <br><br>
 ## At Kookmin University
 
