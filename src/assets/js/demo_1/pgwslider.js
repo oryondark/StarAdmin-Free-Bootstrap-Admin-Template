@@ -205,8 +205,10 @@
             return true;
         };
         var reload = function() {
-            var element = getElement($(this));
-            console.log(element);
+            pgwSlider.plugin.find('.ps-list > li').each(function() {
+                var element = getElement($(this));
+                console.log(element);
+            };
         };
         // Setup
         var setup = function() {
@@ -250,9 +252,9 @@
                 var currentElement = $('<li class="elt_' + elementId + '"></li>');
 
                 if (element.image) {
-                    currentElement.html('<img src="' + element.image + '" alt="' + (element.title ? element.title : '') + '">');
+                    currentElement.html('<img id="preview" src="' + element.image + '" alt="' + (element.title ? element.title : '') + '">');
                 } else if (element.thumbnail) {
-                    currentElement.html('<img src="' + element.thumbnail + '" alt="' + (element.title ? element.title : '') + '">');
+                    currentElement.html('<img id="preview" src="' + element.thumbnail + '" alt="' + (element.title ? element.title : '') + '">');
                 }
 
                 if (element.link) {
