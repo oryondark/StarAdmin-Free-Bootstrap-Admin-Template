@@ -261,6 +261,10 @@
                     currentElement.html('<img id="preview" src="">');
                 }
 
+                if (element.link) {
+                    currentElement.html('<a href="' + element.link + '"' + (element.linkTarget ? ' target="' + element.linkTarget + '"' : '') + '>' + currentElement.html() + '</a>');
+                }
+
                 pgwSlider.plugin.find('.ps-current > ul').append(currentElement);
 
                 // Set selection mode
