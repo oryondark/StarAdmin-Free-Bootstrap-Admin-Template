@@ -216,6 +216,7 @@
             //preview.src = current_thumb;
 
             preview_id = 0
+            console.log(preview);
             for (var item in current_thumb){
                 preview[preview_id].src = current_thumb[preview_id];
                 preview_id++;
