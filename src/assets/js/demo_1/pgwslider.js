@@ -208,7 +208,7 @@
             pgwSlider.plugin.find('.ps-list > li').each(function() {
                 var element = getElement($(this));
                 console.log(element);
-            };
+            });
         };
         // Setup
         var setup = function() {
