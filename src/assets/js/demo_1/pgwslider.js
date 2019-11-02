@@ -214,7 +214,7 @@
             });
             var preivew = document.getElementById("preview");
             //preview.src = current_thumb;
-            console.log(preview[0].src);
+            preview[0].src = current_thumb[0];
         };
         // Setup
         var setup = function() {
