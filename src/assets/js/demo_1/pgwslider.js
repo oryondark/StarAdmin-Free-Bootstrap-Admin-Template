@@ -256,17 +256,6 @@
 
                 $(this).addClass('elt_' + element.id);
 
-                /* Check element title
-                if (element.title) {
-                    if ($(this).find('span').length == 1) {
-                        if ($(this).find('span').text() == '') {
-                            $(this).find('span').text(element.title);
-                        }
-                    } else {
-                        $(this).find('img').after('<span>' + element.title + '</span>');
-                    }
-                }*/
-
                 // Set element in the current list
                 var currentElement = $('<li class="elt_' + elementId + '"></li>');
 
