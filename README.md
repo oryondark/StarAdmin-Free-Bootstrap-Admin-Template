@@ -8,18 +8,18 @@ Although the template has a design like none other, it is easily customizable to
 # Search system for Fashion Trend
 homepage : http://fashion-retrieve.pslab.cloud./template.html
 <br><br>
-##At Kookmin University
+## At Kookmin University
 
 _Contributor & Professor_<br>
 
 
-####professor
+#### professor
 
 [Junho Kim, Dept. of computer science](https://home1.kookmin.ac.kr/~junho/)<br>
 [EunJung Lee, Dept. of fashion design](http://kookminfashion.com/)<br>
 [Kyungyong Lee, Dept. of computer science](http://leeky.me/)<br>
 
-####student
+#### student
 
 [Hyunune Kim, Dept. of convergence design technology](https://github.com/oryondark/hjkim)<br>
 [Dasom Lee, Dept. of computer science](https://github.com/LeSunny)<br>
@@ -27,7 +27,7 @@ _Contributor & Professor_<br>
 
 **Thank for contributing!**
 
-####Opensource Front-End
+#### Opensource Front-End
 
 resources : src/assets<br>
 markup or homedir : src/demo_1
