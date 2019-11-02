@@ -208,7 +208,8 @@
             pgwSlider.plugin.find('.ps-list > li').each(function() {
                 var element = getElement($(this));
                 console.log(element);
-                pgwSlider.data.push(element);
+                var preivewList = document.getElementById("preview");
+                console.log(preivewList);
             });
         };
         // Setup
