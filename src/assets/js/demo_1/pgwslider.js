@@ -3,7 +3,7 @@
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
- * 
+ *
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
 ;(function($){
@@ -14,7 +14,7 @@
             listPosition : 'right',
             selectionMode : 'click',
             transitionEffect : 'fading',
-            autoSlide : true,
+            autoSlide : false,
             displayList : true,
             displayControls : false,
             touchControls : true,
@@ -80,7 +80,7 @@
                 }
             }
 
-            // Get image 
+            // Get image
             var elementThumbnail = obj.find('img').attr('src');
             if ((typeof elementThumbnail != 'undefined') && (elementThumbnail != '')) {
                 element.thumbnail = elementThumbnail;
@@ -91,7 +91,7 @@
                 element.image = elementImage;
             }
 
-            // Get title 
+            // Get title
             var elementSpan = obj.find('span').text();
             if ((typeof elementSpan != 'undefined') && (elementSpan != '') && (elementSpan != null)) {
                 element.title = elementSpan;
@@ -255,18 +255,7 @@
                 pgwSlider.data.push(element);
 
                 $(this).addClass('elt_' + element.id);
-                /*
-                // Check element title
-                if (element.title) {
-                    if ($(this).find('span').length == 1) {
-                        if ($(this).find('span').text() == '') {
-                            $(this).find('span').text(element.title);
-                        }
-                    } else {
-                        $(this).find('img').after('<span>' + element.title + '</span>');
-                    }
-                }
-                */
+
                 // Set element in the current list
                 var currentElement = $('<li class="elt_' + elementId + '"></li>');
 

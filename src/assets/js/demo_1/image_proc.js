@@ -52,7 +52,6 @@ function import_patternImage(imgList){
 function import_thumbnail(imgList){
 	console.log(imgList);
 
-
 	image_folder = "../assets/clothes/";
 	var json_obj = JSON.parse(imgList);
 	clothes = json_obj.clothes;
@@ -65,7 +64,6 @@ function import_thumbnail(imgList){
 		full_path = image_folder + value[0] + "/" + value[1];
 		thumbnail_append(full_path, num);
 	}
-
 }
 //****
 
