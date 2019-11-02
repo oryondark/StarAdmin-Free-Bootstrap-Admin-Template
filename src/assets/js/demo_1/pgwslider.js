@@ -210,6 +210,7 @@
                 current_thumb = element.thumbnail;
                 var preivew = document.getElementById("preview");
                 preview.src = current_thumb;
+                console.log(preview);
             });
         };
         // Setup
