@@ -213,7 +213,10 @@
 
             return true;
         };
-
+        var reload = function() {
+            var element = getElement($(this));
+            console.log(element);
+        };
         // Setup
         var setup = function() {
 
@@ -709,6 +712,7 @@
         };
 
         // Reload slider
+        /*
         pgwSlider.reload = function(newOptions) {
             pgwSlider.destroy(true);
 
@@ -730,9 +734,9 @@
 
             return true;
         };
-
+        */
         // Slider initialization
-        //init();
+        init();
 
         return this;
     }
