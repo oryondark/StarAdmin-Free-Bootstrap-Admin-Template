@@ -256,9 +256,9 @@
                 var currentElement = $('<li class="elt_' + elementId + '"></li>');
 
                 if (element.image) {
-                    currentElement.html('<img id="preview" src="">');
+                    currentElement.html('<img src="' + element.image + '" alt="' + (element.title ? element.title : '') + '">');
                 } else if (element.thumbnail) {
-                    currentElement.html('<img id="preview" src="">');
+                    currentElement.html('<img src="' + element.thumbnail + '" alt="' + (element.title ? element.title : '') + '">');
                 }
 
                 if (element.link) {
