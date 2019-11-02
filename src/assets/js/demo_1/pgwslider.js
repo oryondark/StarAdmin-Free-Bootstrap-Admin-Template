@@ -253,7 +253,6 @@
                 $(this).addClass('elt_' + element.id);
 
                 // Set element in the current list
-                /*
                 var currentElement = $('<li class="elt_' + elementId + '"></li>');
 
                 if (element.image) {
@@ -265,7 +264,7 @@
                 if (element.link) {
                     currentElement.html('<a href="' + element.link + '"' + (element.linkTarget ? ' target="' + element.linkTarget + '"' : '') + '>' + currentElement.html() + '</a>');
                 }
-                */
+
                 pgwSlider.plugin.find('.ps-current > ul').append(currentElement);
 
                 // Set selection mode
